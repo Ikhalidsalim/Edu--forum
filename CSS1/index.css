@@ -1,0 +1,114 @@
+nav{
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    gap: 300px;
+    padding: 10px 20px;
+    border: 1px solid #0004fd10;
+    width: 100%;   
+}
+nav h3{
+    display: flex;
+    justify-content: space-between;
+    gap:10px;
+    padding: 20px;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:20px;
+    border-radius: 50px;
+    border: 1px solid #0004fd10;
+    padding: 16px 10px;
+
+}
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #000000;
+}
+.top-btn{
+    display: flex;
+    justify-content: space-between;
+    gap:15px;
+}
+ span a{
+    background-color: blue;
+    border: 1px solid #0004fd10;
+    padding:7px 14px;
+    border-radius: 15px;   
+}
+span a:hover{
+ background-color: rgb(69, 69, 129);
+    
+    
+}
+main{
+    margin-top: 90px;
+    background-size: 70px;
+    padding: 50px 25px;
+
+}
+.hero-content{
+    
+    width:100%;
+    max-width: 800px;
+    
+    
+
+}
+.text-part{
+    width:100%;
+    max-width: 800px;
+    
+}
+.text{
+    padding: 20px;
+}
+.bottom-btn{
+    display: flex;
+    gap: 25px;
+    padding: 20px;
+    
+}
+.bottom-btn a{
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #0004fd10;
+}
+.bottom-btn a:hover{
+    background-color: rgb(72, 72, 239);
+}
+.grid-template{
+    display:grid;
+    grid-template-columns: repeat(4, 120px);
+    padding: 20px;
+}
+.grid-template span:hover{
+   background-color:rgb(75, 75, 158);
+}
+.hero-image{
+
+    justify-self: end;
+    margin-top: 90px;
+    padding-top: 280px;
+    
+    
+}
+.hero-image img{
+    width: 100%;
+    max-width:500px ;
+    position: absolute;
+    top: 90px;
+    
+
+}
