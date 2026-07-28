@@ -1,0 +1,49 @@
+body{
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-content: center;
+margin:0 auto;
+margin-top: 80px;
+}
+.login-container{
+    padding: 95px 32px;
+    background-color: #2c058f41;
+    width: 420px;
+    border-radius: 10px;
+    box-shadow: 14px rgba(0, 0, 0, 0.236);
+    height: 700px;
+    background: transparent;
+    
+}
+.welcoming-text{
+    line-height: 5px;
+}
+.switch-part{
+    line-height: 25px;
+}
+.radio-link{
+    
+    
+}
+form{
+
+}
+label{
+    margin-bottom: 15px;
+}
+.email{
+    width: 370px;
+    margin-bottom: 20px;
+}
+.password{
+    width: 370px;
+}
+.pass{
+    line-height: 14px;
+    margin-bottom: 30px;
+}
+.sign-in{
+    margin-bottom: 30px; 
+}
+
