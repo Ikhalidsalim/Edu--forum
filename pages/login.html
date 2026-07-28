@@ -18,24 +18,9 @@
             <h1>Welcome back! <i class="bi bi-hand-thumbs-up"></i> </h1>
             <p>sign in to continue to your account</p>
         </div>
-        <div class="switch-part">
-            <span>login as</span>
-        </div>
-       <a href="student.html" class="radio-link"  >
-        <form>
+      
 
-            <label class="student">
-                    <input type="radio" name="userType" value="student" >
-                    student
-                </label>
-                <label class="lecturer">
-                    <input type="radio" name="userType" value="lecturer">
-                    lecturer
-                </label>
-        </form>
-       </a>
-
-        <form>
+        <form id="loginForm">
             <label class="mail">Email</label><br>
             <input class="email" type="email" placeholder="Enter your email">
             <div class="password-fill">
@@ -48,9 +33,18 @@
                 <a href="forgot password?"></a>
             </div>
             <button class="sign-in">sign in</button>
-            <p> Dont have an account? <a href="sign up">sign up</a></p>
+            <p> Dont have an account? <a href="register.html">sign up</a></p>
         </form>
     </div>
  </main>
+
+ <script>
+
+    const loginForm = document.getElementById('loginForm');
+      loginForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+      window.location.href = "dashboard.html"; // Redirect to dashboard page
+      });
+ </script>
 </body>
 </html>

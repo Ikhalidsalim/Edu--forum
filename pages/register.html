@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Registration</title>
-    <link rel="stylesheet" href="reg instructor.css">
+    <link rel="stylesheet" href="/CSS1/registration.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,7 +18,7 @@
 
         
 
-        <form class="student-form">
+        <form id="studentForm">
 
            
             <fieldset class="name-field">
@@ -45,14 +45,31 @@
             </fieldset>
 
             <footer>
-                <button type="submit">Sign Up</button>
+                
 
-                <p>Already have an account? <a href="landing.html" target="_self">Sign In</a></p>
+                    <button type="submit">Sign Up</button>
+                
+                
+            
+
+                <p>Already have an account? <a href="login.html" target="_self">Sign In</a></p>
+                
             </footer>
         </form>
 
         
     </div>
+
+
+    <script>
+      const studentForm = document.getElementById('studentForm');
+      studentForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+      window.location.href = "dashboard.html"; // Redirect to dashboard page
+      });
+       
+
+    </script>
 </body>
 
-</html>
+</html> 
