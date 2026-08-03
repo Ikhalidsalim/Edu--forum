@@ -3,70 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" 
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/CSS1/styles.css">
+    <title>EduForum — Learn, Collaborate, Succeed</title>
+    <meta name="description" content="A smart platform for students and instructors to manage assignments, discussions, grades and more.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/CSS1/index.css">
 </head>
 <body>
-    <header>
-    <nav >
-        
-        <h3><i class="bi bi-mortarboard-fill"></i> EduForum </h3>
-        <ul class="nav_space">
-            <li class="menu-toggle">
-               <li> <a href="Home">Home</a></li> 
-               <li> <a href="about">about</a></li> 
-               <li> <a href="Features">features</a></li> 
-               <li> <a href="Contact">Contact</a></li> 
-            </li>
-        </ul>
-        <div class="top-btn">
-            <a href="login.html">login</a>
-            <a href="register.html">sign in</a>
-        </div>
-    </nav>
-    
-    </header>
-    
-    <main>
-    <section class="hero-content">
-        <div class="text-part">
 
-            <div class="text">
-                <h1>learn. collaborate.<br> succeed together</h1>
-                <p>A smart platform for students and instructors<br> to manage assignments, discussion, grades <br>and more </p>
+    <!-- Decorative background blobs -->
+    <div class="bg-decor">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <header>
+        <nav id="mainNav">
+            <a href="#" class="nav-brand">
+                <div class="brand-icon">
+                    <i class="bi bi-mortarboard-fill"></i>
+                </div>
+                <span>EduForum</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="login.html" class="btn-login">Log in</a>
+                <a href="register.html" class="btn-signup">
+                    Sign up free
+                    <i class="bi bi-arrow-right"></i>
+                </a>
             </div>
-             <div class="bottom-btn">
-                <span><a href="Get started">Get started</a></span> 
-                  <span><a href="learn more">Learn more</a></span>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <i class="bi bi-list" id="menuIcon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <i class="bi bi-stars"></i>
+                        <span>Trusted by 2,000+ students worldwide</span>
+                    </div>
+                    <h1>
+                        Learn. Collaborate.<br>
+                        <span class="gradient-text">Succeed Together.</span>
+                    </h1>
+                    <p class="hero-description">
+                        A smart platform for students and instructors to manage 
+                        assignments, discussions, grades — and everything in between.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="register.html" class="btn-primary">
+                            Get Started
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                        <a href="#features" class="btn-secondary">
+                            <i class="bi bi-play-circle"></i>
+                            Learn More
+                        </a>
+                    </div>
                 </div>
-            <div class="grid-template">
-                <div class="box-1">
-                    <span>2K+</span>
-                    <p>Students</p>
-                    
-                </div>
-                <div class="box-2">
-                    <span>200</span>
-                    <p>Instructors</p>
-                </div>
-                <div class="box-3">
-                    <span>5K+</span>
-                    <p>Assignments</p>
-                </div>
-                <div class="box-4">
-                    <span>98%</span>
-                    <p>satisfaction</p>
+
+                <div class="hero-visual">
+                    <div class="image-glow"></div>
+                    <div class="hero-image-wrapper">
+                        <img src="/assests/Online learning-amico (1).png" alt="Online learning illustration showing a student attending a virtual class">
+                    </div>
+                    <!-- Floating stat cards -->
+                    <div class="float-card float-card-1">
+                        <div class="float-card-icon" style="background: rgba(34,197,94,0.12); color: #22C55E;">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+                        <div>
+                            <strong>2K+</strong>
+                            <span>Active Students</span>
+                        </div>
+                    </div>
+                    <div class="float-card float-card-2">
+                        <div class="float-card-icon" style="background: rgba(99,102,241,0.12); color: #6366F1;">
+                            <i class="bi bi-trophy-fill"></i>
+                        </div>
+                        <div>
+                            <strong>98%</strong>
+                            <span>Satisfaction</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="hero-image">
-            <img src="/assests/Online learning-amico (1).png">
-        </div>
-    </section>
+
+            <!-- Stats bar -->
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number">2K+</span>
+                    <span class="stat-label">Students</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">200</span>
+                    <span class="stat-label">Instructors</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">5K+</span>
+                    <span class="stat-label">Assignments</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Satisfaction</span>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        const menuIcon = document.getElementById('menuIcon');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-open');
+            const isOpen = navLinks.classList.contains('nav-open');
+            menuIcon.className = isOpen ? 'bi bi-x-lg' : 'bi bi-list';
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('nav-open');
+                menuIcon.className = 'bi bi-list';
+            });
+        });
+
+        // Navbar scroll effect
+        const nav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -40px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.hero-text, .hero-visual, .stats-bar, .float-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>

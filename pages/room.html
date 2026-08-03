@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room</title>
+    <link rel="stylesheet" href="/CSS1/styles.css">
+    <link rel="stylesheet" href="/CSS1/room.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="room-page">
+        <input type="radio" name="room-select" id="room-cs482" checked>
+        <input type="radio" name="room-select" id="room-ds405">
+
+        <input type="radio" name="room-nav-cs482" id="cs482-ann" >
+        <input type="radio" name="room-nav-cs482" id="cs482-discussions">
+        <input type="radio" name="room-nav-cs482" id="cs482-resources">
+        
+
+        <input type="radio" name="room-nav-ds405" id="ds405-announcement" checked>
+        <input type="radio" name="room-nav-ds405" id="ds405-discussions">
+        <input type="radio" name="room-nav-ds405" id="ds405-resources">
+        
+
+        <div class="room-list" style="grid-area: room-list;">
+            <h1>My Rooms
+                <button class="add-room-btn"><i class="bi bi-plus"></i></button>
+            </h1>
+            <hr>
+
+            <div class="room-desc">
+                <label class="room-btn" for="room-cs482">
+                    <h2>CS-482</h2>
+                    <p>Advanced Web Development</p>
+                    <span>Instructed by Dr.Evelyn Carter</span>
+                </label>
+            </div>
+
+            <div class="room-desc">
+                <label class="room-btn" for="room-ds405">
+                    <h2>DS-305</h2>
+                    <p>Data Science & Visual Analytics</p>
+                    <span>Instructed by Dr.Evelyn Carter</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="room-card" style="grid-area: room-card;">
+            <div class="cs482-box">
+                <span>CS-482 • Computer Science</span>
+                <h2>Advanced Web Development</h2>
+                <p>Master advanced web architectures, component-driven design systems, type safety, and database
+                    integration.</p>
+                <span>Instructed by Dr.Evelyn Carter</span>
+                <nav class="room-card-nav">
+                    <ul>
+                        <li>
+                            <label class="nav-btn" for="cs482-ann"><i
+                                    class="bi bi-megaphone-fill"> </i>Announcements</label>
+                        </li>
+                        <li>
+                            <label class="nav-btn" for="cs482-discussions">Discussions Board</label>
+                        </li>
+                        <li>
+                            <label class="nav-btn" for="cs482-resources">Resources & Materials</label>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="ds405-box">
+                <span>DS-305 • Data Science</span>
+                <h2>Data Science & Visual Analytics</h2>
+                <p>Learn data-driven storytelling, statistical modeling, D3.js visualization, and notebook-based
+                    analysis.</p>
+                <span>Instructed by Dr.Evelyn Carter</span>
+                <nav class="room-card-nav">
+                    <ul>
+                        <li><label class="nav-btn" for="ds405-announcement"><i
+                                    class="bi bi-megaphone-fill"></i>Announcements</label></li>
+                        <li><label class="nav-btn" for="ds405-discussions">Discussions Board</label></li>
+                        <li><label class="nav-btn" for="ds405-resources">Resources & Materials</label></li>
+                       
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="room-details" style="grid-area: room-details;">
+            <!--CS-482 ANNOUNCEMENT TAB-->
+
+            <div class="cs482-announcement-tab">
+                <h4>Course Announcements <button class="add-ann-btn"><i class="bi bi-plus"></i> Post
+                        Announcement</button></h4>
+
+                <div class="end-feed box">
+                    <i class="bi bi-megaphone-fill"></i>
+                    <h4>Guest Lecture on Responsive UI Design</h4>
+                    <span>Published on 7/18/2026 at 03:30 PM</span>
+                    <p>Next Tuesday we will host Sarah Mitchell, a Principal UX Engineer from Figma, to talk about
+                        design-to-code pipelines, responsive layouts, and modern typography tokens. Attendance is highly
+                        encouraged as this directly relates to your current assignment!</p>
+
+                </div>
+                <div class="end-feed box">
+                    <i class="bi bi-megaphone-fill"></i>
+                    <h4>Guest Lecture on Responsive UI Design</h4>
+                    <span>Published on 7/18/2026 at 03:30 PM</span>
+                    <p>Next Tuesday we will host Sarah Mitchell, a Principal UX Engineer from Figma, to talk about
+                        design-to-code pipelines, responsive layouts, and modern typography tokens. Attendance is highly
+                        encouraged as this directly relates to your current assignment!</p>
+                    <hr>
+
+                </div>
+            </div>
+            <!--CS-482 DISCUSSION TAB-->
+            <div class="cs482-discussion-tab">
+                <h4>Course Resources & Syllabus <button class="add-ann-btn"><i class="bi bi-plus"></i> Upload
+                        Material</button></h4>
+                <div class="end-feed box">
+                    <i class="bi bi-chat-left-text-fill"></i>
+                    <h4>Guest Lecture on Responsive UI Design</h4>
+                    <span>Published on 7/18/2026 at 03:30 PM</span>
+                    <p>Next Tuesday we will host Sarah Mitchell, a Principal UX Engineer from Figma, to talk about
+                        design-to-code pipelines, responsive layouts, and modern typography tokens. Attendance is highly
+                        encouraged as this directly relates to your current assignment!</p>
+
+                </div>
+                <div class="end-feed box">
+                    <i class="bi bi-chat-left-text-fill"></i>
+                    <h4>Guest Lecture on Responsive UI Design</h4>
+                    <span>Published on 7/18/2026 at 03:30 PM</span>
+                    <p>Next Tuesday we will host Sarah Mitchell, a Principal UX Engineer from Figma, to talk about
+                        design-to-code pipelines, responsive layouts, and modern typography tokens. Attendance is highly
+                        encouraged as this directly relates to your current assignment!</p>
+                    <hr>
+                    <button id="reply-btn"><i class="bi bi-chat"></i>Reply</button>
+                    <button id="like-btn"><i class="bi bi-heart"></i>Like</button>
+                </div>
+            </div>
+
+            <!--CS-482 RESOURCES TAB-->
+            <div class="cs482-resources-tab">
+                <h4>Course Resources & Syllabus
+                    <button class="add-ann-btn"><i class="bi bi-plus"></i> Upload Material</button>
+                </h4>
+                <span width>Class lectures, code guidelines, and datasets compiled by the instructor.</span>
+
+                <div class="materials">
+                    <div class="material-box">
+                        <i class="bi bi-file-earmark-text-fill"></i>
+                        <i class="bi bi-file-earmark-arrow-down download-btn"></i>
+
+                        <h4>Course Syllabus</h4>
+                        <p>PDF 1.4 MB</p>
+                        <span class="file-status">Required document</span>
+                    </div>
+                
+                    <div class="material-box">
+                        <i class="bi bi-file-earmark-text-fill"></i>
+                        <i class="bi bi-file-earmark-arrow-down download-btn"></i>
+
+                        <h4>Course Syllabus</h4>
+                        <p>PDF 1.4 MB</p>
+                        <span class="file-status">Required document</span>
+                    </div>
+                
+                    <div class="material-box">
+                        <i class="bi bi-file-earmark-text-fill"></i>
+                        <i class="bi bi-file-earmark-arrow-down download-btn"></i>
+
+                        <h4>Course Syllabus</h4>
+                        <p>PDF 1.4 MB</p>
+                        <span class="file-status">Required document</span>
+                    </div>
+                
+                    <div class="material-box">
+                        <i class="bi bi-file-earmark-text-fill"></i>
+                        <i class="bi bi-file-earmark-arrow-down download-btn"></i>
+
+                        <h4>Course Syllabus</h4>
+                        <p>PDF 1.4 MB</p>
+                        <span class="file-status">Required document</span>
+                    </div>
+               
+                    <div class="material-box">
+                        <i class="bi bi-file-earmark-text-fill"></i>
+                        <i class="bi bi-file-earmark-arrow-down download-btn"></i>
+
+                        <h4>Course Syllabus</h4>
+                        <p>PDF 1.4 MB</p>
+                        <span class="file-status">Required document</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--DS-405 ANNOUNCEMENT TAB-->
+           <div class="ds305-announcement-tab">
+                <h4>Course Announcements <button class="add-ann-btn"><i class="bi bi-plus"></i> Post                      Announcement</button></h4>
+                <div class="end-feed box">
+                    <i class="bi bi-megaphone-fill"></i>
+                    <h4>Dataset for Assignment 3 Released</h4>
+                    <span>Published on 7/16/2026 at 10:15 AM</span>
+                    <p> have posted the dataset for our upcoming visualization assignment. Please check the resources section. It is a CSV format with 10k rows tracking global climate patterns over the last century. Use Pandas or D3 to parse and visualize findings.</p>
+                </div>
+                
+           </div>
+
+           <!--DS-405 DISCUSSION TAB-->
+           <div class="ds305-discussion-tab">
+                <h4>Course Resources & Syllabus <button class="add-ann-btn"><i class="bi bi-plus"></i> Upload
+                        Material</button></h4>
+                <div class="box">
+                    <i class="bi bi-chat-right-dots-fill"></i>
+                    <br>
+                    <span>No discussion threads found. Be the first to start a conversation!</span>
+                </div>
+           </div>
+
+           <!--DS-405 RESOURCES TAB-->
+           <div class="ds305-resources-tab">
+            
+           </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

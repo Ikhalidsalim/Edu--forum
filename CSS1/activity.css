@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 30px;
+}
+
+i{
+    
+    font-size: 30px;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.box{
+    height: 150px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 2px  black;
+    text-align: center;
+    margin-top: 10px;
+    background-color: rgb(201, 222, 250, 0.6);
+}
+
+.feed{
+    display: flex;
+}
+
+.info-icon{
+    display: flex;
+    width: auto;
+    margin: 10px;
+    align-self: center;
+}
+
+.info-head, .info-body, .info-date{
+    display: block;
+    text-align: left;
+    margin: 5px;
+}
+
+.info-main{
+    width: 100%;
+    margin:0 auto;
+    text-align: left;
+}
+
+.info-body{
+    margin-left: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    margin: 8px;
+}
+
+a:hover{
+    color: white;
+}
+
+.end-feed, .info-date{
+    font-size: 11px;
+}
