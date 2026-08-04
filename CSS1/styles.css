@@ -12,58 +12,19 @@ body {
     box-sizing: border-box;
 }
 
-
-/* ===========================
-   Typography
-=========================== */
-
-:root{
-    
-    /* Primary Colors */
-    --color-primary: #2563EB;      
-    --color-primary-dark: #1D4ED8;
-    --color-primary-light: #DBEAFE;
-
-    /* Neutral Colors */
-    --color-black: #111827;
-    --color-dark: #1F2937;
-    --color-gray: #6B7280;
-    --color-light-gray: #E5E7EB;
-    --color-white: #FFFFFF;
-
-    /* Status Colors */
-    --color-success: #22C55E;
-    --color-warning: #F59E0B;
-    --color-danger: #EF4444;
- 
+.grid-template{
+    display: grid;
+    grid-template-columns: 70px 1fr ;
+    grid-template-rows: 68px 90vh;
 }
 
-@media (max-width:1366px){
-
-}
-@media (max-width:1024px) {
-
-}
-@media (max-width:480px){
-
-}
-
-h1, h2,h3, h4, h5,h6{
-    color: var(--color-primary);
-    
-}
-p{
-    color:var(--color-black)
-}
-span{
-    color: var(--color-black)
+.top-bar{
+    background-color: #f5f7fb;
+    grid-column: 1/3;
 }
 
 
 
-
-
-
-
-
-
+.main-content{
+    background-color: #f5f7fb;
+}
