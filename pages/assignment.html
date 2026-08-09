@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="/CSS1/assignment.css">
+    <link rel="stylesheet" href="/CSS1/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="flex-container">
+
+        <input type="radio" name="course-nav" id="cs402" checked>
+        <input type="radio" name="course-nav" id="ds305">
+
+        <input type="radio" name="assignment-nav" id="assignment-info-one" checked>
+        <input type="radio" name="assignment-nav" id="assignment-info-two">
+
+        <div class="assignment-list">
+
+            <h3>ACTIVE CLASSROOM</h3>
+            <div class="course-list box">
+
+                <a href="#open-modal" class="btn">Select Course <i class="bi bi-arrow-down-short"></i></a>
+
+                <div id="open-modal" class="modal-window">
+                    <div>
+
+                        <p>
+                            <label for="cs402">CS 402: Advanced Web Development</label>
+                        </p>
+                        <p>
+                            <label for="ds305">DS 305: Data Science & Visual Analytics</label>
+                        </p>
+                        <a href="#" class="modal-close">Close</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h4>Assignments <button class="add-ann-btn"><i class="bi bi-plus"></i></button></h4>
+
+
+            <div class="assignment box">
+                <label for="assignment-info-one">
+                    <p>Score Potential: 100 PTS</p>
+                    <h5>Assignment 1: Climate Trends Visualizer</h5>
+                    <span><i class="bi bi-calendar-week">Due on 7/18/2026 at 03:30 PM</i>
+                    </span>
+                </label>
+            </div>
+
+            <div class="assignment box">
+                <label for="assignment-info-two">
+                    <p>Score Potential: 100 PTS</p>
+                    <h5>Assignment 2: Visualizer</h5>
+                    <span><i class="bi bi-calendar-week">Due on 7/18/2026 at 03:30 PM</i>
+                    </span>
+                </label>
+            </div>
+
+        </div>
+
+        <div class="assignment-details">
+            <div class="assignment-one">
+                <span>CS-402 • ASSIGNMENT WORKSPACE</span>
+                <h5>Assignment 1: Full-Stack Task Board</h5>
+                <p>
+                    Due Date: 7/26/2026, 12:59:59 AM
+                </p>
+                <p> Potential: 100 PTS</p>
+
+                <hr>
+                <h6>Guidelines & Instructions</h6>
+                <div class="box">
+                    <em>Develop a Kanban-style Task Management system featuring multi-column drag-and-drop mechanics,
+                        search and filtering capability, task priority states, and robust local storage persistence.
+                        Bonus points for subtle task movement micro-animations.</em>
+                </div>
+                <h6>Grading Rubric Rubrics</h6>
+                <div class="box">
+                    <ul>
+                        <li><i class="bi bi-card-checklist"></i>
+                            Drag & Drop Mechanics (25pts)</li>
+                        <li><i class="bi bi-card-checklist"></i>
+                            Filter & Search Utility (25pts)</li>
+                        <li><i class="bi bi-card-checklist"></i>
+                            Local Storage Engine (25pts)</li>
+                        <li><i class="bi bi-card-checklist"></i>
+                            Polish & Transitions (25pts)</li>
+                    </ul>
+                </div>
+
+
+                <div class="submit box">
+                    <h3>Submit Your Stated Work</h3>
+                    <p>Interactive Comments / Submission Notes</p>
+
+                    <form action="">
+                        <textarea id="comment"></textarea>
+                        <br><input type="file" id="assignment-file" name="submission">
+
+
+                        <button type="submit" value="send">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <!--========ASSIGNMENT 2============-->
+            <div class="assignment-two">
+
+                <span>CS-402 • ASSIGNMENT WORKSPACE</span>
+                <h5>Assignment 2: Full-Stack Task Board</h5>
+                <p>
+                    Due Date: 7/26/2026, 12:59:59 AM
+                </p>
+                <p> Score Potential: 100 PTS</p>
+
+                <hr>
+                <h6>Guidelines & Instructions</h6>
+                <div class="box">
+                    <em>Develop a Kanban-style Task Management system featuring multi-column drag-and-drop mechanics,
+                        search and filtering capability, task priority states, and robust local storage persistence.
+                        Bonus points for subtle task movement micro-animations.</em>
+                </div>
+                <h6>Grading Rubric Rubrics</h6>
+                <div class="box">
+                    <ul>
+                        <li><i class="bi bi-card-checklist"></i>
+                            Drag & Drop Mechanics (25pts)</li>
+                        <li><i class="bi bi-card-checklist"></i>
+                            Filter & Search Utility (25pts)</li>
+                        <li><i class="bi bi-card-checklist"></i>
+                            Local Storage Engine (25pts)</li>
+                        <li><i class="bi bi-card-checklist"></i>
+                            UX Polish & Transitions (25pts)</li>
+                    </ul>
+                </div>
+
+
+                <div class="submit box">
+                    <h3>Submit Your Stated Work</h3>
+                    <p>Interactive Comments / Submission Notes</p>
+
+                    <form action="">
+                        <textarea id="comment"></textarea>
+                        <br><input type="file" id="assignment-file" name="submission">
+
+
+                        <button type="submit" value="send">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="assignment-submission">
+            <!--========SUBMISSION 1===============-->
+            <div class="submission-1">
+                <h3>Grade & Review Status</h3>
+                <hr>
+                <div class="box">
+                    <h5>Evaluation Score</h5>
+                    <h6 class="A-class">98/100</h6>
+                    <span>GRADED SECURELY</span><br>
+                    <em>Lecturer Feedback</em>
+                    <blockquote>"Fantastic job, Alex! The portfolio design is exceptionally polished. Your
+                        typography
+                        choices are spot-on, and the transition micro-animations when hovering over the card modules
+                        are
+                        extremely elegant. The dark theme passes AAA contrast perfectly. Keep up this high
+                        standard!"
+                    </blockquote>
+                    <span>Graded by Dr. Evelyn Carter on 8/4/2026</span>
+                </div>
+            </div>
+
+            <!--========SUBMISSION 2===============-->
+            <div class="submission-2">
+                <h3>Grade & Review Status</h3>
+                <hr>
+                <div class="box">
+                    <h5>Evaluation Score</h5>
+                    <h6 class="A-class">68/100</h6>
+                    <span>GRADED SECURELY</span><br>
+                    <em>Lecturer Feedback</em>
+                    <blockquote>"Fantastic job, Alex! The portfolio design is exceptionally polished. Your
+                        typography
+                        choices are spot-on, and the transition micro-animations when hovering over the card modules
+                        are
+                        extremely elegant. The dark theme passes AAA contrast perfectly. Keep up this high
+                        standard!"
+                    </blockquote>
+                    <span>Graded by Dr. Evelyn Carter on 8/4/2026</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

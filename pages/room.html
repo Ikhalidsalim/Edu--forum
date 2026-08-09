@@ -15,12 +15,12 @@
         <input type="radio" name="room-select" id="room-cs482" checked>
         <input type="radio" name="room-select" id="room-ds405">
 
-        <input type="radio" name="room-nav-cs482" id="cs482-ann" >
+        <input type="radio" name="room-nav-cs482" id="cs482-announcement" checked>
         <input type="radio" name="room-nav-cs482" id="cs482-discussions">
         <input type="radio" name="room-nav-cs482" id="cs482-resources">
         
 
-        <input type="radio" name="room-nav-ds405" id="ds405-announcement" checked>
+        <input type="radio" name="room-nav-ds405" id="ds405-announcement" >
         <input type="radio" name="room-nav-ds405" id="ds405-discussions">
         <input type="radio" name="room-nav-ds405" id="ds405-resources">
         
@@ -58,7 +58,7 @@
                 <nav class="room-card-nav">
                     <ul>
                         <li>
-                            <label class="nav-btn" for="cs482-ann"><i
+                            <label class="nav-btn" for="cs482-announcement"><i
                                     class="bi bi-megaphone-fill"> </i>Announcements</label>
                         </li>
                         <li>
@@ -80,8 +80,7 @@
                 <span>Instructed by Dr.Evelyn Carter</span>
                 <nav class="room-card-nav">
                     <ul>
-                        <li><label class="nav-btn" for="ds405-announcement"><i
-                                    class="bi bi-megaphone-fill"></i>Announcements</label></li>
+                        <li><label class="nav-btn" for="ds405-announcement"><i class="bi bi-megaphone-fill"></i>Announcements</label></li>
                         <li><label class="nav-btn" for="ds405-discussions">Discussions Board</label></li>
                         <li><label class="nav-btn" for="ds405-resources">Resources & Materials</label></li>
                        
@@ -119,7 +118,7 @@
             </div>
             <!--CS-482 DISCUSSION TAB-->
             <div class="cs482-discussion-tab">
-                <h4>Course Resources & Syllabus <button class="add-ann-btn"><i class="bi bi-plus"></i> Upload
+                <h4>Class Forums & Discussions <button class="add-ann-btn"><i class="bi bi-plus"></i> Upload
                         Material</button></h4>
                 <div class="end-feed box">
                     <i class="bi bi-chat-left-text-fill"></i>
@@ -128,6 +127,9 @@
                     <p>Next Tuesday we will host Sarah Mitchell, a Principal UX Engineer from Figma, to talk about
                         design-to-code pipelines, responsive layouts, and modern typography tokens. Attendance is highly
                         encouraged as this directly relates to your current assignment!</p>
+                        <hr>
+                    <button id="reply-btn"><i class="bi bi-chat"></i>Reply</button>
+                    <button id="like-btn"><i class="bi bi-heart"></i>Like</button>
 
                 </div>
                 <div class="end-feed box">
@@ -212,7 +214,7 @@
 
            <!--DS-405 DISCUSSION TAB-->
            <div class="ds305-discussion-tab">
-                <h4>Course Resources & Syllabus <button class="add-ann-btn"><i class="bi bi-plus"></i> Upload
+                <h4>Class Forums & Discussions <button class="add-ann-btn"><i class="bi bi-plus"></i> Upload
                         Material</button></h4>
                 <div class="box">
                     <i class="bi bi-chat-right-dots-fill"></i>
@@ -223,7 +225,32 @@
 
            <!--DS-405 RESOURCES TAB-->
            <div class="ds305-resources-tab">
-            
+                <div clas="box">
+                    <h4>Course Resources & Syllabus
+                    <button class="add-ann-btn"><i class="bi bi-plus"></i> Upload Material</button>
+                </h4>
+                <span width>Class lectures, code guidelines, and datasets compiled by the instructor.</span>
+
+                <div class="materials">
+                    <div class="material-box">
+                        <i class="bi bi-file-earmark-text-fill"></i>
+                        <i class="bi bi-file-earmark-arrow-down download-btn"></i>
+
+                        <h4>Course Syllabus</h4>
+                        <p>PDF 1.4 MB</p>
+                        <span class="file-status">Required document</span>
+                    </div>
+                
+                    <div class="material-box">
+                        <i class="bi bi-file-earmark-text-fill"></i>
+                        <i class="bi bi-file-earmark-arrow-down download-btn"></i>
+
+                        <h4>Course Syllabus</h4>
+                        <p>PDF 1.4 MB</p>
+                        <span class="file-status">Required document</span>
+                    </div>
+                
+                </div>
            </div>
 
         </div>

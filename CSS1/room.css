@@ -30,10 +30,7 @@ body {
 .room-list {
     width: 300px;
     border: 2px solid gray;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
+    
 }
 
 
@@ -62,7 +59,9 @@ h1 i {
 
 }
 
-
+.nav-btn:checked{
+    background-color: green;
+}
 
 span {
     padding: 5px;
@@ -103,9 +102,10 @@ span {
 .room-btn:active,
 #room-cs482:checked~.room-list .room-btn[for="room-cs482"],
 #room-ds405:checked~.room-list .room-btn[for="room-ds405"] {
-    background-color: rgb(201, 222, 250, 0.6);
+    background-color: rgb(201, 222, 250, 0.9);
     cursor: pointer;
 }
+
 
 h1 {
     font-size: 20px;
@@ -118,12 +118,14 @@ h1 {
     display: flex;
     list-style: none;
     background-color: transparent;
-    width: 600px;
+    width: auto;
     text-align: center;
 }
 
+
+
 .room-card-nav ul li {
-    padding: 20px;
+    padding: 10px;
     cursor: pointer;
     font-size: 14px;
     font-weight: 500;
@@ -134,7 +136,7 @@ h1 {
 .room-card-nav ul li:hover,
 .room-card-nav ul li:focus,
 .room-card-nav ul li:active {
-    background-color: rgb(201, 222, 250, 0.6);
+    background-color: rgb(201, 222, 250, 0.9);
     cursor: pointer;
 
 }
@@ -165,12 +167,12 @@ h1 {
     border-radius: 20px;
     box-shadow: 0 0 2px black;
     margin-top: 10px;
-    background-color: rgb(201, 222, 250, 0.6);
+    background-color: rgb(201, 222, 250, 0.9);
 }
 
 .box i {
     padding: 10px;
-    background-color: rgb(201, 222, 250, 0.6);
+    background-color: rgb(201, 222, 250, 0.9);
     border-radius: 50%;
     font-size: 20px;
     font-weight: 700;
@@ -216,13 +218,13 @@ hr {
 #like-btn {
     background-color: transparent;
     border: none;
-    color: blue;
+    color: hwb(240 0% 0%);
     font-size: 14px;
     margin-right: 10px;
 }
 
 #like-btn:checked {
-    color: red;
+    background-color: red;
 }
 
 .materials {
@@ -236,7 +238,7 @@ hr {
     padding: 10px;
     max-width: 300px;
     min-width: 200px;
-    background-color: rgb(201, 222, 250, 0.6);
+    background-color: rgb(201, 222, 250, 0.9);
     border-radius: 10px;
     margin: 20px;
 }
@@ -260,11 +262,11 @@ hr {
     display: none;
 }
 
-#cs482-ann:checked~.room-details .cs482-announcement-tab {
+#cs482-announcement:checked~.room-details .cs482-announcement-tab {
     display: block;
 }
 
-#cs482-discussions:checked~.room-details .cs482-discussion-tab {
+#cs482-discussion:checked~.room-details .cs482-discussion-tab {
     display: block;
 }
 
@@ -278,15 +280,14 @@ hr {
 .ds305-resources-tab {
     display: none;
 }
-
-#ds305-announcement:checked~.room-details .ds305-announcement-tab {
+#ds405-announcement:checked~.room-details .ds305-announcement-tab {
     display: block;
 }
 
-#ds305-discussion:checked~.room-details .ds305-discussion-tab {
+#ds405-discussions:checked~.room-details .ds305-discussion-tab {
     display: block;
 }
 
-#ds305-resources:checked~.room-details .ds305-resources-tab{
+#ds405-resources:checked~.room-details .ds305-resources-tab {
     display: block;
 }

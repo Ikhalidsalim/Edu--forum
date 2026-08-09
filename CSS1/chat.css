@@ -17,8 +17,10 @@
 .hero-content{
     background-color: #f5f7fb;
     border: 1px solid rgba(128, 128, 128, 0.756);
-    max-width: 1230px;
+    max-width: 900px;
 }
+
+
 .top-bar{
     background-color: #f5f7fb;
     display: flex;
@@ -167,7 +169,6 @@
     padding-right: 10px;
     background-color:lightblue;
     height: 500px;
-    overflow-y: scroll;
 }
 .input-img {
    
