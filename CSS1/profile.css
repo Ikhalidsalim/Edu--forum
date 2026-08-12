@@ -3,6 +3,8 @@ body{
     display: flex;
     justify-content: center;
     align-self: center;
+    background-color: var(--color-primary-light);
+    color: var(--paragraph);
 }
 
 .profile-box{
@@ -12,7 +14,9 @@ body{
     min-width: 500px;
     width: 70%;
     max-width: 700px;
-    
+    background-color: var(--color-white);
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(11, 37, 69, 0.08);
 }
 
 img{
@@ -45,7 +49,7 @@ p{
 
 hr{
     margin: 10px;
-    border: 2px solid black;
+    border: 2px solid var(--color-black);
     border-radius: 10px;
 }
 
@@ -64,10 +68,11 @@ hr{
     border-radius: 10px;
     font-weight: 600;
     padding: 5px;
-    background-color: white;
+    background-color: var(--color-primary-light);
+    color: var(--paragraph);
 }
 
 i{
-    font-size: 25px;
-    color: blue;
+    font-size: 1.4rem;
+    color: var(--color-accent);
 }

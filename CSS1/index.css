@@ -10,15 +10,22 @@
 }
 
 :root {
-    /* Primary */
-    --primary: #4F46E5;
-    --primary-dark: #4338CA;
-    --primary-light: #EEF2FF;
-    --primary-glow: rgba(79, 70, 229, 0.35);
+    /* Exact palette from reference */
+    --primary: #0B2545;
+    --primary-dark: #0B2545;
+    --primary-light: #EAF2FF;
+    --primary-glow: rgba(16, 78, 216, 0.18);
 
-    /* Accent gradient */
-    --gradient: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #EC4899 100%);
-    --gradient-text: linear-gradient(135deg, #4F46E5 0%, #7C3AED 40%, #EC4899 100%);
+    --secondary: #8DA9C4;
+    --heading: #1D4ED8;
+    --paragraph: #0B2545;
+    --icon: #1D4ED8;
+    --hover: #6C85A3;
+    --span: #1D4ED8;
+    --button-gradient: linear-gradient(135deg, #1D4ED8, #0B2545);
+
+    --gradient: linear-gradient(135deg, #1D4ED8 0%, #0B2545 100%);
+    --gradient-text: linear-gradient(135deg, #1D4ED8 0%, #0B2545 100%);
 
     /* Neutrals */
     --gray-50: #F9FAFB;

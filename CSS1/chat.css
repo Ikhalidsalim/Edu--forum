@@ -11,18 +11,18 @@
    
 }
 .side-bar{ 
-    background-color: #f5f7fb;
+    background-color: var(--color-primary-light);
 
 }
 .hero-content{
-    background-color: #f5f7fb;
+    background-color: var(--color-primary-light);
     border: 1px solid rgba(128, 128, 128, 0.756);
     max-width: 900px;
 }
 
 
 .top-bar{
-    background-color: #f5f7fb;
+    background-color: var(--color-primary-light);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -42,14 +42,14 @@
     padding: 1px 1px;
     border-radius: 5px;
     height: 30px;
-    background-color: #a9b4cb;
+    background-color: var(--color-secondary);
 
 }
 .search-bar{
     position: relative;
     width: 290px;
     padding: 10px 10px;
-    border: 0.5px solid #000000;
+    border: 0.5px solid var(--color-black);
     
 }
 .search-bar input{
@@ -73,8 +73,8 @@
 .avatar{
     width: 60px;
     height: 40px;
-    background-color:rgb(97, 97, 177);
-    color: #0a0000;
+    background-color: var(--color-primary);
+    color: var(--color-white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,11 +92,11 @@
 }
 .chat-info p{
     font-size: 12px;
-    color: #666;
+    color: var(--color-gray);
 }
 .label{
-    background-color: #a9b4cb;
-    color: #000;
+    background-color: var(--color-secondary);
+    color: var(--color-black);
     font-size: 10px;
     border-radius: 5px;
     width: fit-content;
@@ -105,7 +105,7 @@
 }
 .chat-meta{
     font-size: 10px;
-    color:#000000;
+    color: var(--color-black);
     position: absolute;
     right: 10px;
     top: 5px;
@@ -113,8 +113,8 @@
 .chat-item img{
     width: 60px;
     height: 40px;
-    background-color:rgb(97, 97, 177);
-    color: #0a0000;
+    background-color: var(--color-primary);
+    color: var(--color-white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,15 +124,15 @@
     display: flex;
     gap: 10px;
     padding: 10px 15px;
-    background-color: #f5f7fb;
+    background-color: var(--color-primary-light);
     border: 1px solid rgba(128, 128, 128, 0.756);
 
 }
 .avater{
     width: 50px;
     height: 50px;
-    background-color:rgb(97, 97, 177);
-    color: #0a0000;
+    background-color: var(--color-primary);
+    color: var(--color-white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,14 +148,14 @@
 }
 .text-part p{
     font-size: 14px;
-    color: #666;
+    color: var(--color-gray);
 }
 .group{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-left:auto;
-    background-color:rgb(97, 97, 177);
+    background-color: var(--color-primary);
     border-radius: 15px;
     font-size: 12px;
     width:70px;
@@ -167,13 +167,13 @@
 .main-part{
     padding-left: 10px ;
     padding-right: 10px;
-    background-color:lightblue;
+    background-color: var(--color-primary-light);
     height: 500px;
 }
 .input-img {
    
     width:50px;
-    color: #0a0000;
+    color: var(--color-black);
     justify-content: center;
     align-items: center;
     
@@ -227,7 +227,7 @@ img{
 }
 .text{
     padding:20px 20px;
-    background-color:#ffffff;
+    background-color: var(--color-white);
     width: 40%;
     padding: 10px 10px;
     border-radius: 10px 10px 0 10px;
@@ -240,7 +240,7 @@ img{
     display: flex;
     margin-left: auto;
     padding: 10px 10px;
-    background-color: #ffffff;
+    background-color: var(--color-white);
     width: 600px;
     border-radius: 0px 20px 10px 30px;
     justify-content: flex-end;

@@ -2,6 +2,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: var(--color-primary-light);
+    color: var(--paragraph);
 }
 
 
@@ -29,7 +31,7 @@ body {
 
 .room-list {
     width: 300px;
-    border: 2px solid gray;
+    border: 2px solid var(--color-gray);
     
 }
 
@@ -38,7 +40,7 @@ body {
 .room-card {
     width: 100%;
     padding: 5px;
-    border: 2px solid gray;
+    border: 2px solid var(--color-gray);
     justify-content: baseline;
 }
 
@@ -60,7 +62,7 @@ h1 i {
 }
 
 .nav-btn:checked{
-    background-color: green;
+    background-color: var(--color-success);
 }
 
 span {
@@ -91,10 +93,11 @@ span {
     cursor: pointer;
     text-align: left;
     padding: 10px;
-    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 5px 0px rgba(11, 37, 69, 0.12);
     border-radius: 10px;
     margin: 10px;
     width: 100%;
+    color: var(--paragraph);
 }
 
 .room-btn:hover,
@@ -102,7 +105,7 @@ span {
 .room-btn:active,
 #room-cs482:checked~.room-list .room-btn[for="room-cs482"],
 #room-ds405:checked~.room-list .room-btn[for="room-ds405"] {
-    background-color: rgb(201, 222, 250, 0.9);
+    background-color: var(--color-primary-light);
     cursor: pointer;
 }
 
@@ -130,13 +133,13 @@ h1 {
     font-size: 14px;
     font-weight: 500;
     align-content: center;
-    border-right: 1px solid gray;
+    border-right: 1px solid var(--color-gray);
 }
 
 .room-card-nav ul li:hover,
 .room-card-nav ul li:focus,
 .room-card-nav ul li:active {
-    background-color: rgb(201, 222, 250, 0.9);
+    background-color: var(--color-primary-light);
     cursor: pointer;
 
 }
@@ -167,12 +170,12 @@ h1 {
     border-radius: 20px;
     box-shadow: 0 0 2px black;
     margin-top: 10px;
-    background-color: rgb(201, 222, 250, 0.9);
+    background-color: var(--color-primary-light);
 }
 
 .box i {
     padding: 10px;
-    background-color: rgb(201, 222, 250, 0.9);
+    background-color: var(--color-primary-light);
     border-radius: 50%;
     font-size: 20px;
     font-weight: 700;
@@ -203,8 +206,8 @@ h1 {
 .room-details button {
     align-items: right;
     margin: auto;
-    background-color: blue;
-    color: white;
+    background: var(--button-gradient);
+    color: #F7F9FC;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -218,13 +221,13 @@ hr {
 #like-btn {
     background-color: transparent;
     border: none;
-    color: hwb(240 0% 0%);
+    color: var(--color-black);
     font-size: 14px;
     margin-right: 10px;
 }
 
 #like-btn:checked {
-    background-color: red;
+    background-color: var(--color-danger);
 }
 
 .materials {
@@ -238,7 +241,7 @@ hr {
     padding: 10px;
     max-width: 300px;
     min-width: 200px;
-    background-color: rgb(201, 222, 250, 0.9);
+    background-color: var(--color-primary-light);
     border-radius: 10px;
     margin: 20px;
 }
@@ -246,7 +249,7 @@ hr {
 .materials i {
     background-color: transparent;
     border: none;
-    color: black;
+    color: var(--color-black);
     font-size: 20px;
     font-weight: 700;
     margin-right: 10px;
