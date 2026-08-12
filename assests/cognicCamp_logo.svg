@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 520" width="100%" height="100%">
+  <defs>
+    <!-- Figure Gradients -->
+    <linearGradient id="fig1-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0052CC"/>
+      <stop offset="100%" stop-color="#2684FF"/>
+    </linearGradient>
+    
+    <linearGradient id="fig2-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0747A6"/>
+      <stop offset="100%" stop-color="#0065FF"/>
+    </linearGradient>
+
+    <linearGradient id="fig3-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00388B"/>
+      <stop offset="100%" stop-color="#0052CC"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .title {
+      font-family: 'Montserrat', 'Inter', 'Segoe UI', sans-serif;
+      font-weight: 700;
+      font-size: 46px;
+      fill: #1A222E;
+      letter-spacing: -0.5px;
+    }
+    .subtitle {
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      fill: #222934;
+      letter-spacing: 0.2px;
+    }
+  </style>
+
+  <!-- LOGO MARK: 3 Stylized Figures -->
+  <g transform="translate(10, -10)">
+    <!-- Figure 1 (Left / Smallest) -->
+    <circle cx="170" cy="185" r="17" fill="url(#fig1-grad)" />
+    <path d="M 125 265 L 170 212 L 200 265 L 180 265 L 170 242 L 145 265 Z" fill="url(#fig1-grad)" />
+
+    <!-- Figure 2 (Middle) -->
+    <circle cx="225" cy="155" r="20" fill="url(#fig2-grad)" />
+    <path d="M 175 265 L 225 186 L 260 265 L 238 265 L 225 228 L 197 265 Z" fill="url(#fig2-grad)" />
+
+    <!-- Figure 3 (Right / Largest) -->
+    <circle cx="285" cy="120" r="23" fill="url(#fig3-grad)" />
+    <path d="M 225 265 L 285 152 L 335 265 L 308 265 L 285 205 L 250 265 Z" fill="url(#fig3-grad)" />
+  </g>
+
+  <!-- TYPOGRAPHY -->
+  <!-- Brand Name -->
+  <text x="250" y="345" text-anchor="middle" class="title">CogniCAMP</text>
+
+  <!-- Tagline -->
+  <text x="250" y="395" text-anchor="middle" class="subtitle">Smarter Every Day, Stronger as One.</text>
+</svg>

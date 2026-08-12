@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="/CSS1/assignment.css">
+    <link rel="stylesheet" href="/CSS1/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>All Assignment</h1>
+
+        <!--==============SEARCH BAR========-->
+        <div class="search-bar">
+            <i class="bi bi-search search-icon"></i>
+            <input type="search" placeholder="Search Assignments" id="search-btn" class="search-btn">
+
+
+            <div class="sort-btn">
+                <p class="sort"><i class="bi bi-filter">Sort & Filter</i>
+            </div>
+
+            </p>
+        </div>
+
+        <!--==============TABLE SECTION========-->
+
+        <div class="table-part">
+            <div class="table-row">
+                <div class="ass-name"><strong>Assignment Name</strong></div>
+                <div class="stat"><strong>Status</strong></div>
+                <div class="score"><strong>Score</strong></div>
+                <div class="action"><strong>Action</strong></div>
+            </div>
+
+            <div class="assignment">
+                <div class="ass-name">
+                    <p>CS-482 - Advanced <br>
+                        <span>UI/UX Project</span>
+                    </p>
+                    <div class="view-more">
+                        <button id="viewModal">More > </button>
+                    </div>
+                </div>
+                <div class="stat">
+                    <p class="subt">Submitted</p>
+                </div>
+                <div class="score">
+                    <p>96/100<br>
+                        <span>(A)</span>
+                    </p>
+                </div>
+                <div class="action">
+                    <form id="submitAssignment">
+                        <input type="file" id="sendAss">
+
+                        <label for="sendAss" class="submit-btn"><i class="bi bi-trophy"></i>Submit Work</label>
+
+                    </form>
+                </div>
+
+                <div class="modal-container" id="modalContainer">
+                    <div class="modal-content">
+                        <span class="close" id="closeModal">&times;</span>
+                        <h4><i class="bi bi-file-earmark-bar-graph"></i>
+ CS-482-Advanced UI/UX Project</h4>
+                        <h5>Description</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, aliquid? Natus soluta ut
+                            eligendi sunt aliquam dignissimos dicta minima consequatur dolor cumque quasi, accusantium
+                            accusamus modi molestias, reiciendis autem. Sequi.</p>
+                        <h5><i class="bi bi-calendar-event"></i>
+ Due Date</h5>
+                        <p>August 15, 2026 at 12:00am</p>
+                        <h5><i class="bi bi-link-45deg"></i>
+Reference Material</h5>
+                        <div class="ref-materials">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="assignment">
+                <div class="ass-name">
+                    <p>CS-482 - Database<br>
+                        <span>Normalization quiz </span>
+                    </p>
+                    <div class="view-more">
+                        <button id="view-modal">More > </button>
+                    </div>
+                </div>
+                <div class="stat">
+                    <p class="grd">Graded</p>
+                </div>
+                <div class="score">
+                    <p>85/100<br>
+                        <span>(B)</span>
+                    </p>
+                </div>
+                <div class="action">
+                    <form id="submitAssignment">
+                        <input type="file" id="sendAss">
+
+                        <label for="sendAss" class="submit-btn"><i class="bi bi-trophy"></i>Submit Work</label>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="assignment">
+                <div class="ass-name">
+                    <div>
+                        <p>MTH-101 - Calculus II<br>
+                            <span>Final</span>
+                        </p>
+                    </div>
+                    <div class="view-more">
+                        <button id="view-modal">More > </button>
+                    </div>
+                </div>
+                <div class="stat">
+                    <p class="pend">Pending</p>
+                </div>
+                <div class="score">
+                    <p>-/100<br>
+                        <span>(-)</span>
+                    </p>
+                </div>
+                <div class="action">
+                    <form id="submitAssignment">
+                        <input type="file" id="sendAss">
+
+                        <label for="sendAss" class="submit-btn"><i class="bi bi-trophy"></i>Submit Work</label>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="assignment">
+                <div class="ass-name">
+                    <p>CS-482 - System<br>
+                        <span>Architecture Paper</span>
+                    </p>
+                    <div class="view-more">
+                        <button id="view-modal">More > </button>
+                    </div>
+                </div>
+                <div class="stat">
+                    <p class="ovd">Over-due</p>
+                </div>
+                <div class="score">
+                    <p>-/100<br>
+                        <span>(-)</span>
+                    </p>
+                </div>
+                <div class="action">
+                    <form id="submitAssignment">
+                        <input type="file" id="sendAss">
+
+                        <label for="sendAss" class="submit-btn"><i class="bi bi-trophy"></i>Submit Work</label>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+<script>
+    const modal = document.getElementById("modalContainer");
+    const viewModal = document.getElementById("viewModal");
+    const closeModal = document.getElementById("closeModal");
+
+    viewModal.onclick = function () {
+        modal.style.display = "block";
+    };
+
+    closeModal.onclick = function () {
+        modal.style.display = "none";
+    };
+
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+</script>
+
+</html>

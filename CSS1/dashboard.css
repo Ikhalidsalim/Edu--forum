@@ -1,18 +1,26 @@
 /*SIDE BAR*/
+body{
+    background-color: var(--color-primary-light);
+    color: var(--paragraph);
+}
+
 .side-bar{
-    color: rgb(37, 99, 235);
-    background-color: rgb(201, 222, 250);
+    color: var(--color-accent);
+    background-color: var(--color-white);
+
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 100px;
     text-align: center;
     padding: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-body);
 }
 
 .side-item i{
     display: block;
-    font-size: 30px;
+    font-size: 1.6rem;
+    color: var(--color-accent);
+    margin-bottom: 6px;
 }
 
 .side-item{
@@ -23,133 +31,141 @@
     flex-shrink: 1;
 }
 
+.side-item span{
+    font-size: 10px;
+}
+
 i:hover{
-    background-color: rgb(37, 99, 235, 0.5);
     border-radius: 15px;
-    height: 100%;
 }
 
 .side-bar a{
     margin: none;
     text-decoration: none;
-    color: black;
+    color: var(--color-black);
 }
 
-.side-bar .side-item:hover {
-    margin: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 5px solid rgb(37, 99, 235);
+.side-bar .side-item:hover , .side-bar .side-item:active{
+    
+    border-left: 5px solid var(--color-accent);
 }
 
-/*NAV BAR*/
+
+.side-item{
+    transition-property: border;
+    transition-duration: 4s;
+    transition-timing-function: ease;
+    transition-delay: 4s;
+}
+
+
+
+/*=================NAV BAR=====================*/
 .top-flex{
     display: flex;
+    width: 100%;
     justify-content: space-between;
+    background-color: var(--color-white);
 }
 
-.top-flex-1, .top-flex-2, .top-flex-3{
-    margin-left: 5px;
+.top {
+    width: 100%;
+    padding: 0;
+    max-width: 300px;
+    flex-grow: 1;
+    margin: 0;
+    max-width: 300px;
     height: 67px;
-    width: 20px;
-    flex-grow:  1;
 }
 
-.top-flexbox-1{
-    width: 100%;
-}
-
-span{
-    font-size: 10px;
-}
-
-mark{
-    border-radius: 20px;
-    background-color: rgba(141, 70, 102, 0.1);
-}
-
-.top-flex-1{
-    font-size: 15px;
-    text-align: left;
-    font-weight: 200;
-    width: 120px;
-    max-width: 300px;
-
-  
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    grid-template-rows: 32px 32px;
-    
-    grid-template-areas: 
-    "top-flexbox-1 top-flexbox-2"
-    "top-flexbox-1 top-flexbox-3";
-}
-
-.top-flexbox-1, .top-flexbox-3{
-    width: 200px;
-   
-}
-
-.top-flexbox-2,.top-flexbox-3,.top-flexbox-1{
-   
-   text-align: left;
-   height: 80%;
-   width: 100%;
-   
-   margin: auto;
-   align-items: last baseline;
-   
-   justify-items: flex-start;
-}
-
-.top-flex-2{
-    display: none;
-    
-}
-
-@media(min-width: 1000px){
-.top-flex-2{
+.flex-1{
+    padding: 0;
     display: flex;
-    border-radius: 15px;
-}
+    align-content: center;
+    justify-content: left;
 }
 
-.top-flex-2 input[type="search"]{
-    height: 50%;
-    width: 100%;
+.main-logo{
+    padding: 0;
+    width: 75px;
+    height: 85px;
+}
+
+/*==================SEARCH BAR======================*/
+
+.flex-2{
+    display: flex;
+    align-content: center;
+    justify-content: center; 
+    max-width: 500px;  
+}
+
+.search-icon{
+    position: relative;
+    display: inline-block;
+    color: var(--color-accent);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    
+}
+
+
+.search-icon i{
+    font-size: 20px;
+
+    position: absolute;
+    right: 2px;
+    bottom: 20px;
+}
+
+input[type="search"]{
     margin: auto;
-    justify-self: center;
+    height: 40px;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    box-shadow: 0 0 0 1px rgba(13, 37, 69, 0.12);
+    border-radius: 10px;
+    color: var(--paragraph);
 }
 
-.top-flex-3{
-    
-     width: 100%;
-     max-width: 300px;
-
+/*===============ACCOUNT DETAILS====================*/
+.profile-pic{
+    border-radius: 20px;
+    width: 50px;
 }
 
-.top-flex-3{
-    font-size: 15px;
-    text-align: left;
-    font-weight: 200;
-    width: 120px;
-    max-width: 300px;
-
-  
-    display: grid;
-    grid-template-columns: 70px 150px 60px;
-    grid-template-rows: 32px 32px;
-    
-    grid-template-areas: 
-    "top-flex3box-1 top-flex3box-2 top-flex3box-4"
-    "top-flex3box-1 top-flex3box-3 top-flex3box-4";
+.flex-3{
+    display: flex;
+    align-content: center;
+    justify-content: right;
+    margin: 5px;
+    height: 50px;
 }
+
+/*===============MAIN PART====================*/
+
 
 i{
-    font-size: 30px;
+    font-size: 1.4rem;
 }
 
-
-.top-flex3box-1{
-   margin: auto;
+iframe{
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(270deg, rgba(255,255,255,0.9),
+        rgba(255,255,255,0.1)), url(/assests/cognicCamp_logo.svg)
+    ;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
 }
+
+.bg-image{
+    height:100px;
+    width: 700px;
+}
+

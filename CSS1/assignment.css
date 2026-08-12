@@ -1,0 +1,195 @@
+body{
+    background-color: var(--color-primary-light);
+    color: var(--paragraph);
+}
+
+.container{
+    margin: auto;
+    padding: 20px;
+    max-width: 80%;
+    align-items: center;
+    background: transparent;
+}
+
+h1{
+    text-align: center;
+}
+
+.search-bar{
+    display: flex;
+    width: 100%;
+}
+
+.search-btn{
+    width: 80%;
+    height: 50px;
+    margin-right: 10px;
+    padding-left: 40px;
+    font-size: 20px;
+    background-color: rgba(141, 169, 196, 0.18);
+    border: 1px solid rgba(13, 37, 69, 0.12);
+    border-radius: 15px;
+    color: var(--paragraph);
+}
+
+.sort-btn{
+    background-color: var(--color-white);
+    width: 20%;
+    text-align: center;
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+}
+
+.search-btn p{
+    font-size: 25px;
+    color: var(--color-gray);
+}
+
+.search-icon{
+    position: relative;
+    top: 5px;
+    left: 32px;
+     font-size: 25px;
+    color: var(--color-gray);
+
+}
+
+.table-row{
+    display: flex;
+    margin: 15px;
+}
+
+.ass-name, .stat, .score, .action{
+    padding: 10px;
+    width: 150px;
+    padding: 15px 5px;
+    
+}
+
+.ass-name{
+    display: flex;
+    width: 45%;
+    justify-content: space-between;
+}
+
+.ass-name button{
+    width: auto;
+    background-color: transparent;
+    border: none;
+    font-style: italic;
+    text-decoration: underline;
+    margin-right: 30px;
+}
+
+.ass-name button:hover{
+    transform: scale(1.1);
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.stat{
+    width: 20%;
+    text-align: center;
+
+    justify-items: center;
+}
+
+.action{
+    width: 20%;
+    text-align: center;
+}
+
+.score{
+    width: 15%;
+    text-align: center;
+}
+
+.assignment{
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 0px;
+    height: 100px;
+}
+
+.action input{
+    display: none;
+}
+
+.action #submitAssignment{
+    font-size: 1.2rem;
+     border-radius: 20px;
+    padding: 7px;
+    width: 100%;
+    word-wrap: normal;
+    background: var(--button-gradient);
+    color: #F7F9FC;
+    border: none;
+}
+
+.submit-btn i{
+    font-size: 20px;
+}
+
+.subt{
+    background-color: var(--color-success);
+    border-radius: 20px;
+    padding: 7px;
+    width: 150px;
+}
+
+.ovd{
+    background-color: var(--color-danger);
+    border-radius: 20px;
+    padding: 7px;
+    width: 150px;
+}
+
+.pend{
+    background-color: var(--color-warning);
+    border-radius: 20px;
+    padding: 7px;
+    width: 150px;
+}
+
+.grd{
+    background-color: var(--color-accent);
+    border-radius: 20px;
+    padding: 7px;
+    width: 150px;
+}
+
+button {
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100px;
+    max-width: 150px;
+}
+
+.modal-container{
+    display: none;
+    padding: 20px;
+    background-color: var(--color-white);
+    width: 60%;
+    max-width: 500px;
+    height: 500px;
+    border: 1px solid var(--color-black);
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+
+    top: 200px;
+    left: 300px;
+}
+
+.modal-container i{
+    font-size: 1.5rem;
+    color: var(--color-accent);
+}
