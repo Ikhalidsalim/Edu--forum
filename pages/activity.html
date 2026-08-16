@@ -1,40 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activity</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-        <link rel="stylesheet" href="/CSS1/styles.css">
-        <link rel="stylesheet" href="/CSS1/activity.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/CSS1/styles.css">
+    <link rel="stylesheet" href="/CSS1/activity.css">
 </head>
+
 <body>
-    <h1>Activity page</h1>
-    <p>Stay up to date with discussions, grades, announcements, and tasks.</p>
-    <div class="feed box ">
-        <div class="info-icon"> <p><i class="bi bi-chat-left"></i></p> </div>
-        <div class="info-main">
-             <strong class="info-head">Group : CS-402 Study Group</strong>
-             <span class="info-body">That makes alot of sense, let's keep colaborating on this! <br><em>(Stimutlated reply from classmate)</em></span>
-             <a href="/pages/chat.html">Click here to view</a>
-             <span class="info-date">6:56PM 7/21/2026</span>
+    <div class="intro-text">
+        <h1>Activity page</h1>
+        <div class="sort-btn">
+            <p class="sort"><i class="bi bi-filter">Sort & Filter</i>
         </div>
     </div>
- 
     <div class="feed box ">
-        <div class="info-icon"> <p><i class="bi bi-chat-left"></i></p> </div>
-        <div class="info-main">
-             <strong class="info-head">Group : CS-402 Study Group</strong>
-             <span class="info-body">That makes alot of sense, let's keep colaborating on this! <br><em>(Stimutlated reply from classmate)</em></span>
-             <a href="/pages/chat.html">Click here to view</a>
-             <span class="info-date">6:56PM 7/21/2026</span>
+        <div class="info-icon">
+            <p><i class="bi bi-chat-left-fill"></i></p>
         </div>
+        <div class="info-main">
+            <a href="chat.html" target="display-tab">
+                <div class="info-header">
+                    <strong class="info-head">Group : CS-402 Study Group</strong>
+                    <span class="info-date">6:56PM 7/21/2026</span>
+                </div>
+                <div class="info-footer">
+                    <span class="info-body">That makes alot of sense, let's keep colaborating on this! </span>
+
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="feed box">
+        <div class="info-icon">
+            <p><i class="bi bi-book-fill"></i></p>
+        </div>
+        <div class="info-main">
+            <a href="chat.html" target="display-tab">
+                <div class="info-header">
+                    <strong class="info-head">Assignment : Advanced
+                        UI/UX Project </strong>
+                    <span class="info-date">6:56PM 7/21/2026</span>
+                </div>
+                <div class="info-footer">
+                    <span class="info-body">That makes alot of sense, let's keep colaborating on this! </span>
+
+                </div>
+            </a>
+        </div>
+
     </div>
     <div class="end-feed box">
         <p><i class="bi bi-bell"></i></p>
         <h2>Your feed is clean!</h2>
-        <span>No notifications found. Any activities, announcements, or grades from your lecturers will appear right here.</span>
+        <span>No notifications found. Any activities, announcements, or grades from your lecturers will appear right
+            here.</span>
     </div>
-    
+
 </body>
+
 </html>
