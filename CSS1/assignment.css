@@ -116,6 +116,7 @@ p{
     border-radius: 20px;
     box-shadow: 0px 0px 5px 0px;
     height: 100px;
+    width: auto;
 }
 
 .action input{
@@ -178,6 +179,7 @@ button {
     padding: 20px;
     background-color: var(--color-white);
     width: 60%;
+    border-radius: 20px;
     max-width: 500px;
     height: 500px;
     border: 1px solid var(--color-black);
@@ -185,11 +187,76 @@ button {
     z-index: 1000;
     inset: 0;
 
-    top: 200px;
-    left: 300px;
+    top: 100px;
+    left: 150px;
 }
 
 .modal-container i{
     font-size: 1.5rem;
     color: var(--color-accent);
 }
+
+@media (max-width: 900px) {
+
+    .ass-name{
+    display: flex;
+    width: 45%;
+    
+    justify-content: space-between;
+}
+
+.ass-name p{
+    font-size: 12px;
+}
+    
+.submit-btn, .submit-btn i{
+    font-size: 10px;
+    
+}
+
+.submit-btn{
+    padding: 10px;
+}
+
+.subt{
+    background-color: var(--color-success);
+    border-radius: 20px;
+    padding: 7px;
+    font-size: 12px;
+    width: 100px;
+}
+
+.ovd{
+    background-color: var(--color-danger);
+    border-radius: 20px;
+    padding: 7px;
+    width: 100px;
+    font-size: 12px;
+}
+
+.pend{
+    background-color: var(--color-warning);
+    border-radius: 20px;
+    padding: 7px;
+    font-size: 12px;
+    width: 100px;
+}
+
+.grd{
+    background-color: var(--color-accent);
+    border-radius: 20px;
+    padding: 7px;
+    width: 100px;
+    font-size: 12px;
+}
+
+button {
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100px;
+    max-width: 100px;
+    font-size: 12px;
+}
+}
+

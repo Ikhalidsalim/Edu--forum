@@ -8,12 +8,14 @@ body{
     color: var(--color-accent);
     background-color: var(--color-white);
 
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
     text-align: center;
     padding: 0;
     font-family: var(--font-body);
+    height: 100%;
 }
 
 .side-item i{
@@ -21,18 +23,30 @@ body{
     font-size: 1.6rem;
     color: var(--color-accent);
     margin-bottom: 6px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.top-items{
+    height: 100%;
 }
 
 .side-item{
     align-content: end;
     justify-content: center;
     width: 100%;
-    height: 70px;
-    flex-shrink: 1;
+    height: 90px;
+    flex-shrink: 0;
+    transition: border-left 0.2s ease, background-color 0.2s ease;
 }
 
 .side-item span{
     font-size: 10px;
+    transition: color 0.2s ease;
+}
+
+.last-item{
+    margin-top: 20px;
+    justify-self: flex-end;
 }
 
 i:hover{
@@ -43,19 +57,30 @@ i:hover{
     margin: none;
     text-decoration: none;
     color: var(--color-black);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.side-bar .side-item:hover , .side-bar .side-item:active{
-    
+.side-bar .side-item:hover,
+.side-bar .side-item:active,
+.side-bar .side-item.active{
     border-left: 5px solid var(--color-accent);
+    background-color: rgba(29, 78, 216, 0.06);
 }
 
+.side-bar .side-item.active a,
+.side-bar .side-item.active i,
+.side-bar .side-item.active span {
+    color: var(--color-accent);
+}
 
-.side-item{
-    transition-property: border;
-    transition-duration: 4s;
-    transition-timing-function: ease;
-    transition-delay: 4s;
+.side-bar .side-item.active i {
+    color: var(--color-accent) !important;
+    transform: scale(1.08);
 }
 
 
@@ -100,20 +125,34 @@ i:hover{
     max-width: 500px;  
 }
 
-.search-icon{
-    position: relative;
-    display: inline-block;
-    color: var(--color-accent);
-    background-color: transparent;
-    outline: none;
-    border: none;
+.search-icon i{
+   
+    background-color: #ffffff;
+    
     
 }
 
 
-.search-icon i{
-    font-size: 20px;
+.search-icon {
+    position: relative;
+    top: 25px;
+    display: inline-block;
+    right: 36px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    height: 4px;
+    width: 40px;
+    font-size: 17px;
+    height: 40px;
+    border-radius: 8px;
+}
 
+.search-icon i{
+    font-size: 25px;
     position: absolute;
     right: 2px;
     bottom: 20px;
@@ -132,6 +171,20 @@ input[type="search"]{
 }
 
 /*===============ACCOUNT DETAILS====================*/
+.activity-bell{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+
+.activity-bell a{
+    font-size: 20px;
+    background-color: rgb(221, 221, 226);
+    border-radius: 40%;
+    padding: 5px;
+}
+
 .profile-pic{
     border-radius: 20px;
     width: 50px;

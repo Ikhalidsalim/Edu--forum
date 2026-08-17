@@ -25,20 +25,20 @@
 
                 </div>
                 <!--search bar-->
-                <div class="top flex-2" class="top-flex2">
+                <div class="top flex-2">
                     <input type="search" placeholder="Assignments, Announcement, Materials">
                     <button class="search-icon"><i class="bi bi-search"></i></button>
 
 
                 </div>
-                
+
 
                 <!--account details-->
 
                 <div class="top flex-3" class="top-flex4">
-                    <div>
-                        <a href="pages\activity.html" target="">
-                        <i class="bi bi-bell"></i>
+                    <div class="activity-bell">
+                        <a href="activity.html" target="display-tab">
+                            <i class="bi bi-bell"></i>
                         </a>
                     </div>
                     <img src="/assests/pfp pic.jpg" class="profile-pic" alt="pfp">
@@ -50,48 +50,45 @@
             </div>
         </div>
         <div class="side-bar">
-            <div class="side-item">
-                <a href="activity.html" target="display-tab">
-                    <i class="bi bi-bell"></i>
-                    <span>Activity</span>
-                </a>
+
+            <div class="top-items">
+                <div class="side-item">
+                    <a href="room.html" target="display-tab">
+                        <i class="bi bi-people"></i>
+                        <span>Rooms</span>
+                    </a>
+                </div>
+
+                <div class="side-item">
+                    <a href="assignment.html" target="display-tab">
+                        <i class="bi bi-book"></i>
+                        <span>Assignments</span>
+                    </a>
+                </div>
+
+                <div class="side-item">
+                    <a href="chat.html" target="display-tab">
+                        <i class="bi bi-chat-left"></i>
+                        <span>Chat</span>
+                    </a>
+                </div>
+
+
+                <div class="side-item">
+                    <a href="profile.html" target="display-tab">
+                        <i class="bi bi-person-circle"></i>
+                        <span>Profile</span>
+                    </a>
+                </div>
+
             </div>
-            <div class="side-item">
-                <a href="chat.html" target="display-tab">
-                    <i class="bi bi-chat-left"></i>
-                    <span>Chat</span>
-                </a>
+            <div class="last-item">
+                <div class="side-item ">
+                    <a href="settings.html" target="display-tab">
+                        <i class="bi bi-gear"></i>
+                    </a>
+                </div>
             </div>
-            <div class="side-item">
-                <a href="room.html" target="display-tab">
-                    <i class="bi bi-people"></i>
-                    <span>Rooms</span>
-                </a>
-            </div>
-            <div class="side-item">
-                <a href="assignment.html" target="display-tab">
-                    <i class="bi bi-book"></i>
-                    <span>Assignments</span>
-                </a>
-            </div>
-            <div class="side-item">
-                <a href="analytics.html" target="display-tab">
-                    <i class="bi bi-graph-up"></i>
-                    <span>Analytics</span>
-                </a>
-            </div>
-            <div class="side-item">
-                <a href="profile.html" target="display-tab">
-                    <i class="bi bi-person-circle"></i>
-                    <span>Profile</span>
-                </a>
-            </div>
-            <div class="side-item">
-                <a href="settings.html" target="display-tab">
-                    <i class="bi bi-gear"></i>
-                </a>
-            </div>
-            </ul>
         </div>
         <div class="main-content">
             <iframe class="display-tab" border="0" name="display-tab">
@@ -99,6 +96,23 @@
             </iframe>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sideItems = Array.from(document.querySelectorAll('.side-item'));
+
+            sideItems.forEach((item) => {
+                const link = item.querySelector('a');
+
+                if (!link) return;
+
+                link.addEventListener('click', () => {
+                    sideItems.forEach((navItem) => navItem.classList.remove('active'));
+                    item.classList.add('active');
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
