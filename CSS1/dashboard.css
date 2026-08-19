@@ -1,4 +1,8 @@
 /*SIDE BAR*/
+:root {
+    --button: #1D4ED8;
+}
+
 body{
     background-color: var(--color-primary-light);
     color: var(--paragraph);
@@ -127,7 +131,7 @@ i:hover{
 
 .search-icon i{
    
-    background-color: #ffffff;
+    background-color: var(color-light-gray);
     
     
 }
@@ -138,7 +142,7 @@ i:hover{
     top: 25px;
     display: inline-block;
     right: 36px;
-    background: transparent;
+    background-color: transparent;
     border: none;
     padding: 0;
     margin: 0;
@@ -152,10 +156,11 @@ i:hover{
 }
 
 .search-icon i{
-    font-size: 25px;
+    font-size: 20px;
     position: absolute;
-    right: 2px;
+    right: 5px;
     bottom: 20px;
+    
 }
 
 input[type="search"]{
@@ -163,7 +168,7 @@ input[type="search"]{
     height: 40px;
     width: 100%;
     border: none;
-    background-color: transparent;
+    background-color: var(--color-light-gray);
     padding: 10px;
     box-shadow: 0 0 0 1px rgba(13, 37, 69, 0.12);
     border-radius: 10px;
@@ -176,12 +181,14 @@ input[type="search"]{
     justify-content: center;
     align-content: center;
     margin: auto;
+    background-color: var(--soft-blue);
+    border-radius: 30%;
+    place-items: center;
 }
 
 .activity-bell a{
     font-size: 20px;
-    background-color: rgb(221, 221, 226);
-    border-radius: 40%;
+    
     padding: 5px;
 }
 

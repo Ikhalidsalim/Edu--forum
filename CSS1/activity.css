@@ -98,3 +98,91 @@ i{
     text-align: center;
     gap: 10px;
 }
+
+body {
+    max-width: none;
+    padding: 0;
+    font-family: var(--font-body);
+    background: var(--page-bg);
+    color: var(--charcoal);
+}
+
+body > * {
+    width: min(100%, 1100px);
+    margin-inline: auto;
+}
+
+.intro-text {
+    align-items: flex-end;
+    gap: 20px;
+    padding: 40px 30px 30px;
+}
+
+.intro-text h1 {
+    font-size: 32px;
+    color: var(--charcoal);
+}
+
+.sort-btn {
+    min-height: 42px;
+    padding: 0 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    transition: 0.2s ease;
+}
+
+.sort-btn:hover {
+    border-color: #60a5fa;
+    background: #eff6ff;
+}
+
+.sort-btn p { color: var(--deep-blue); font-weight: 600; }
+.sort-btn p i { background: transparent; color: var(--deep-blue); font-size: 16px; }
+
+.feed,
+.end-feed {
+    width: calc(100% - 60px);
+    min-height: 0;
+    margin: 0 30px 14px;
+    padding: 20px 24px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    box-shadow: 0 2px 8px rgba(31, 41, 55, 0.05);
+}
+
+.feed { transition: 0.2s ease; }
+.feed:hover { border-color: #60a5fa; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.10); }
+
+.info-icon {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    place-items: center;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: var(--royal-blue);
+}
+
+.info-icon p { display: contents; }
+.info-icon i { padding: 0; font-size: 19px; }
+.info-main a { color: inherit; }
+.info-header { align-items: baseline; gap: 16px; margin-bottom: 6px; }
+.info-head { color: var(--charcoal); }
+.info-date { flex-shrink: 0; color: var(--muted); font-size: 13px; }
+.info-footer, .info-body { color: var(--muted); font-size: 14px; line-height: 1.5; }
+.info-body { margin-left: 0; }
+
+.end-feed { min-height: 190px; }
+.end-feed h2 { font-size: 20px; }
+.end-feed span { max-width: 520px; color: var(--muted); font-size: 14px; line-height: 1.5; }
+
+@media (max-width: 600px) {
+    .intro-text { align-items: stretch; flex-direction: column; padding: 28px 18px 24px; }
+    .sort-btn { align-self: stretch; justify-content: center; }
+    .feed, .end-feed { width: calc(100% - 36px); margin-inline: 18px; padding: 18px; align-items: flex-start; }
+    .info-header { align-items: flex-start; flex-direction: column; gap: 4px; }
+    .end-feed { align-items: center; }
+}

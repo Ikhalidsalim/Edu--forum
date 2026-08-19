@@ -22,6 +22,7 @@
     --hover: #6C85A3;
     --span: #1D4ED8;
     --button-gradient: linear-gradient(135deg, #1D4ED8, #0B2545);
+    --button: #1D4ED8;
 
     --gradient: linear-gradient(135deg, #1D4ED8 0%, #0B2545 100%);
     --gradient-subtle: linear-gradient(135deg, #1D4ED8 0%, #8DA9C4 100%);

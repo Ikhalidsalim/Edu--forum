@@ -22,12 +22,12 @@
     --icon: #1D4ED8;
     --hover: #6C85A3;
     --span: #1D4ED8;
-    --button-gradient: linear-gradient(135deg, #1D4ED8, #0B2545);
+    --button: #1D4ED8;
 
     /* Compatibility aliases */
     --color-primary: #1D4ED8;
     --color-primary-dark: #0B2545;
-    --color-primary-light: #F4F7FB;
+    --color-primary-light: #FFFFFF;
     --color-primary-light-rgba: rgba(244, 247, 251, 0.9);
     --color-accent: #1D4ED8;
     --color-secondary: #8DA9C4;
@@ -39,6 +39,26 @@
     --color-success: #22C55E;
     --color-warning: #F59E0B;
     --color-danger: #EF4444;
+
+    /* Shared application theme */
+    --royal-blue: #2563EB;
+    --deep-blue: #1E40AF;
+    --sky-blue: #60A5FA;
+    --charcoal: #1F2937;
+    --muted: #64748B;
+    --page-bg: #F5F7FB;
+    --surface: #FFFFFF;
+    --white: var(--surface);
+    --border: #D9E2F0;
+    --soft-blue: #EFF6FF;
+    --hover-blue: #DBEAFE;
+
+    /* Shared sizing and effects */
+    --radius-sm: 7px;
+    --radius-md: 12px;
+    --shadow-card: 0 2px 8px rgba(31, 41, 55, 0.05);
+    --shadow-card-hover: 0 4px 12px rgba(37, 99, 235, 0.10);
+    --focus-ring: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
 body {
@@ -46,7 +66,7 @@ body {
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
     color: var(--paragraph);
-    background: linear-gradient(180deg, #F9FBFF 0%, #EEF5FF 100%);
+    background: #FFFFFF;
 }
 
 * {
@@ -90,7 +110,7 @@ i:hover {
 }
 
 button {
-    background: var(--button-gradient);
+    background: var(--button);
     color: #F7F9FC;
     border: none;
     padding: 10px 20px;
@@ -177,4 +197,51 @@ small {
     box-shadow: 0 0 2px black;
     margin-top: 10px;
     background-color: var(--color-primary-light);
+}
+
+/* Reusable page-theme primitives */
+.page-container {
+    width: min(100%, 1100px);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 30px 60px;
+}
+
+.surface-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    box-shadow: var(--shadow-card);
+}
+
+.surface-card--interactive { transition: 0.2s ease; }
+
+.surface-card--interactive:hover {
+    border-color: var(--sky-blue);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.icon-tile {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 8px;
+    background: var(--soft-blue);
+    color: var(--royal-blue);
+}
+
+.button-primary {
+    min-height: 42px;
+    padding: 0 20px;
+    border: 0;
+    border-radius: var(--radius-sm);
+    background: var(--royal-blue);
+    color: var(--surface);
+    font-weight: 600;
+}
+
+.button-primary:hover {
+    background: var(--deep-blue);
+    opacity: 1;
 }

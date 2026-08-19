@@ -1,12 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings — EduForum</title>
-    <link rel="stylesheet" href="/CSS1/styles.css">
+    <link rel="stylesheet" href="../CSS1/styles.css">
+    <link rel="stylesheet" href="../CSS1/settings.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
+
 <body>
+    <div class="container">
+
     <h1>Settings</h1>
+    <p>Manage your account and preferences</p>
+
+
+    <!-- ================= PROFILE ================= -->
+    <fieldset>
+        <div class="feild-name">
+            <div class="head-icon">
+                <p><i class="bi bi-person"></i></p>
+            </div>
+            <h3>PROFILE</h3>
+        </div>
+
+        <div class="feild-content first">
+
+            <div class="profile-pic">
+                <img src="../assests/pfp pic.jpg" alt="profile-pic">
+
+                <label for="profile-picture" class="upload-pic">
+                    <i class="bi bi-camera"></i>
+                </label>
+
+                <input type="file" id="profile-picture" hidden>
+            </div>
+
+            <div class="profile-details">
+
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name">
+                </div>
+
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username">
+                </div>
+
+                <div class="input-group">
+                    <label for="mail">Email</label>
+                    <input type="email" id="mail" placeholder="Enter your email">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="feild-button">
+            <button>Save Changes</button>
+        </div>
+    </fieldset>
+
+
+    <!-- ================= APPEARANCE ================= -->
+    <fieldset>
+        <div class="feild-name">
+            <div class="head-icon">
+                <p><i class="bi bi-palette"></i></p>
+            </div>
+            <h3>APPEARANCE</h3>
+        </div>
+
+        <div class="feild-content">
+
+            <!-- Theme -->
+            <div class="setting-row">
+                <div class="setting-info">
+                    <label for="theme">Theme</label>
+                    <p>Choose your preferred theme</p>
+                </div>
+
+                <select id="theme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+
+
+            <!-- Font Size -->
+            <div class="setting-row">
+                <div class="setting-info">
+                    <label for="font-size">Font Size</label>
+                    <p>Select the font size for easier reading</p>
+                </div>
+
+                <select id="font-size">
+                    <option value="small">Small</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="large">Large</option>
+                    <option value="extra-large">Extra Large</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="feild-button">
+            <button>Save Changes</button>
+        </div>
+    </fieldset>
+
+
+    <!-- ================= EMAIL NOTIFICATION ================= -->
+    <fieldset>
+        <div class="feild-name">
+            <div class="head-icon">
+                <p><i class="bi bi-envelope"></i></p>
+            </div>
+            <h3>EMAIL NOTIFICATION</h3>
+        </div>
+
+        <div class="feild-content">
+
+            <!-- New Replies -->
+            <div class="setting-row">
+                <div class="setting-info">
+                    <label for="reply-notification">
+                        New Replies to your post
+                    </label>
+                    <p>Get notified when someone replies to your post</p>
+                </div>
+
+                <label class="toggle">
+                    <input type="checkbox" id="reply-notification" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+
+            <!-- Mentions -->
+            <div class="setting-row">
+                <div class="setting-info">
+                    <label for="mention-notification">
+                        Mentions of you
+                    </label>
+                    <p>Get notified when someone mentions you</p>
+                </div>
+
+                <label class="toggle">
+                    <input type="checkbox" id="mention-notification" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+
+            <!-- New Forum Topic -->
+            <div class="setting-row">
+                <div class="setting-info">
+                    <label for="forum-notification">
+                        New forum topic
+                    </label>
+                    <p>Get notified when a new forum topic is created</p>
+                </div>
+
+                <label class="toggle">
+                    <input type="checkbox" id="forum-notification" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+
+            <!-- Course Announcement -->
+            <div class="setting-row">
+                <div class="setting-info">
+                    <label for="course-notification">
+                        Course announcement
+                    </label>
+                    <p>Get notified about course announcements</p>
+                </div>
+
+                <label class="toggle">
+                    <input type="checkbox" id="course-notification" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+
+            <!-- Assignment Reminder -->
+            <div class="setting-row">
+                <div class="setting-info">
+                    <label for="assignment-notification">
+                        Assignment reminders
+                    </label>
+                    <p>Get notified about upcoming assignment deadlines</p>
+                </div>
+
+                <label class="toggle">
+                    <input type="checkbox" id="assignment-notification" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+        </div>
+
+        <div class="feild-button">
+            <button>Save Changes</button>
+        </div>
+    </fieldset>
+
+
+    <!-- ================= PRIVACY ================= -->
+    <fieldset>
+        <div class="feild-name">
+            <div class="head-icon">
+                <p><i class="bi bi-shield-lock"></i></p>
+            </div>
+            <h3>PRIVACY</h3>
+        </div>
+
+        <div class="feild-content">
+
+            <!-- Who can view profile -->
+            <div class="setting-row">
+                <div class="setting-info">
+                    <label for="profile-visibility">
+                        Who can view your profile
+                    </label>
+                    <p>Choose who can see your profile</p>
+                </div>
+
+                <select id="profile-visibility">
+                    <option value="everyone">Everyone</option>
+                    <option value="friends">Friends</option>
+                    <option value="course-mates">Course Mates</option>
+                    <option value="only-me">Only Me</option>
+                </select>
+            </div>
+
+
+            <!-- Who can message -->
+            <div class="setting-row">
+                <div class="setting-info">
+                    <label for="message-privacy">
+                        Who can message you
+                    </label>
+                    <p>Choose who can send you messages</p>
+                </div>
+
+                <select id="message-privacy">
+                    <option value="everyone">Everyone</option>
+                    <option value="friends">Friends</option>
+                    <option value="course-mates">Course Mates</option>
+                    <option value="no-one">No One</option>
+                </select>
+            </div>
+
+
+            <!-- Online Status -->
+            <div class="setting-row">
+                <div class="setting-info">
+                    <label for="online-status">
+                        Share online status
+                    </label>
+                    <p>Allow others to see when you are online</p>
+                </div>
+
+                <label class="toggle">
+                    <input type="checkbox" id="online-status" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+
+            <!-- Email Address -->
+            <div class="setting-row">
+                <div class="setting-info">
+                    <label for="show-email">
+                        Show my email address
+                    </label>
+                    <p>Allow others to see your email address</p>
+                </div>
+
+                <label class="toggle">
+                    <input type="checkbox" id="show-email">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+
+            <!-- Enrolled Courses -->
+            <div class="setting-row">
+                <div class="setting-info">
+                    <label for="show-courses">
+                        Show enrolled courses
+                    </label>
+                    <p>Allow others to see the courses you are enrolled in</p>
+                </div>
+
+                <label class="toggle">
+                    <input type="checkbox" id="show-courses" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+        </div>
+
+        <div class="feild-button">
+            <button>Save Changes</button>
+        </div>
+    </fieldset>
+
+
+    <!-- ================= SECURITY ================= -->
+    <fieldset>
+        <div class="feild-name">
+            <div class="head-icon">
+                <p><i class="bi bi-lock"></i></p>
+            </div>
+            <h3>SECURITY</h3>
+        </div>
+
+        <div class="feild-content">
+
+            <!-- Password -->
+            <div class="setting-row">
+                <div class="setting-info">
+                    <label>Password</label>
+                    <p>Update your account password</p>
+                </div>
+
+                <button class="secondary-button">
+                    Change Password
+                </button>
+            </div>
+
+
+            <!-- Two Factor Authentication -->
+            <div class="setting-row">
+                <div class="setting-info">
+                    <label for="two-factor">
+                        Two-Factor Authentication (2FA)
+                    </label>
+                    <p>
+                        Add an extra layer of security to your account
+                    </p>
+                </div>
+
+                <label class="toggle">
+                    <input type="checkbox" id="two-factor">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+        </div>
+
+        <div class="feild-button">
+            <button>Save Changes</button>
+        </div>
+    </fieldset>
+
+</div>
+
 </body>
+
 </html>

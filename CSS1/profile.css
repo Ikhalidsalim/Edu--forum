@@ -1,19 +1,19 @@
 body{
-    margin: auto;
+    margin: 0;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-self: center;
+    align-items: center;
     background-color: var(--color-primary-light);
     color: var(--paragraph);
 }
 
 .profile-box{
-   margin-top: 10vh;
+    margin: 0;
     padding: 20px;
     height: 350px;
-    min-width: 500px;
-    width: 70%;
-    max-width: 700px;
+    min-width: 320px;
+    width: min(700px, 90vw);
     background-color: var(--color-white);
     border-radius: 18px;
     box-shadow: 0 8px 20px rgba(11, 37, 69, 0.08);
