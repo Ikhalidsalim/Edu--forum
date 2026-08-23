@@ -9,65 +9,56 @@
 
 </head>
 <body>
-  <div class="sidebar">
-    <h2>Information</h2>
-    <ul>
-      <li>Announcements</li>
-    </ul>
-    <h2>Channels</h2>
-    <ul>
-      <li>General</li>
-      
-      <li>Study Tips</li>
-      <li>Lecture Q&A</li>
-      <li>Resources</li>
-    </ul>
-    <h2>Private Channels</h2>
-    <ul>
-      <li>Group Project A</li>
-      <li>Exam Prep</li>
-    </ul>
-  </div>
+  <div class="chat-layout">
+    <aside class="sidebar">
+      <div class="course-header">
+        <span class="course-tag">Course</span>
+        <h2>CPE 101</h2>
+      </div>
 
-  <div class="chat">
+      <nav class="sidebar-menu" aria-label="Course navigation">
+        <button class="nav-item active" type="button">Announcement</button>
+        <button class="nav-item" type="button">Materials</button>
+      </nav>
+    </aside>
 
-    <div class="display-unit">
+    <main class="chat">
+      <div class="display-unit">
         <div class="message">
-        <div class="avatar">I</div>
-        <div class="bubble">
+          <div class="avatar">I</div>
+          <div class="bubble">
             <h4>Instructor</h4>
             <p>Reminder: Quiz on Chapter 3 will be available tomorrow. Please review your notes.</p>
             <div class="timestamp">12:39</div>
-        </div>
+          </div>
         </div>
 
         <div class="message">
-        <div class="avatar">F</div>
-        <div class="bubble">
+          <div class="avatar">F</div>
+          <div class="bubble">
             <h4>Student (Fatima)</h4>
             <p>Does anyone have tips for remembering the steps in the scientific method?</p>
             <div class="timestamp">12:45</div>
-        </div>
+          </div>
         </div>
 
         <div class="message">
-        <div class="avatar">A</div>
-        <div class="bubble">
+          <div class="avatar">A</div>
+          <div class="bubble">
             <h4>Student (Ahmed)</h4>
             <p>I use flashcards — they help me memorize definitions quickly.</p>
             <div class="timestamp">12:47</div>
+          </div>
         </div>
-        </div>
-    </div>
+      </div>
 
-    <div class="input-unit">
-
+      <div class="input-unit">
         <div class="chat-input">
-            <input type="text" placeholder="Type your message...">
-            <button>Send</button>
+          <input type="text" placeholder="Type your message...">
+          <button>Send</button>
         </div>
-
-    </div>
+      </div>
+    </main>
   </div>
 </body>
 </html>
