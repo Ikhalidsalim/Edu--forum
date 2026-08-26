@@ -3,9 +3,12 @@
     --button: #1D4ED8;
 }
 
-body{
+html,
+html body {
     background-color: var(--color-primary-light);
     color: var(--paragraph);
+    height: 100%;
+    overflow: hidden;
 }
 
 .side-bar{
@@ -19,8 +22,13 @@ body{
     text-align: center;
     padding: 0;
     font-family: var(--font-body);
-    height: 100%;
+    height: auto;
+
+    position: relative;
+    z-index: 10;
 }
+
+
 
 .side-item i{
     display: block;
@@ -90,7 +98,15 @@ i:hover{
 
 
 /*=================NAV BAR=====================*/
+
+.top-bar{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
 .top-flex{
+    height: 100%;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -130,10 +146,7 @@ i:hover{
 }
 
 .search-icon i{
-   
-    background-color: var(color-light-gray);
-    
-    
+    background-color: var(--color-white);
 }
 
 
@@ -168,7 +181,7 @@ input[type="search"]{
     height: 40px;
     width: 100%;
     border: none;
-    background-color: var(--color-light-gray);
+    background-color: var(--color-white);
     padding: 10px;
     box-shadow: 0 0 0 1px rgba(13, 37, 69, 0.12);
     border-radius: 10px;
@@ -199,11 +212,36 @@ input[type="search"]{
 
 .flex-3{
     display: flex;
-    align-content: center;
-    justify-content: right;
+    gap: 5px;
+    align-items: space-between;
+    justify-content: space-between;
     margin: 5px;
     height: 50px;
 }
+
+.flex-3 div{
+    width: auto;
+}
+
+.avater{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.avater h3{
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size:1.1rem;
+  
+}
+
+ .avater span{
+  font-size: 0.8rem;
+  margin-top: 0;
+  margin-bottom: 0;
+ }
+
 
 /*===============MAIN PART====================*/
 
@@ -215,6 +253,7 @@ i{
 iframe{
     width: 100%;
     height: 100%;
+    z-index: 10;
     background: 
         linear-gradient(270deg, rgba(255,255,255,0.9),
         rgba(255,255,255,0.1)), url(/assests/cognicCamp_logo.svg)

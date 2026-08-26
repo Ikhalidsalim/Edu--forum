@@ -61,12 +61,19 @@
     --focus-ring: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
 body {
     font-family: var(--font-body);
     font-size: var(--font-size-base);
     line-height: var(--line-height-base);
     color: var(--paragraph);
     background: #FFFFFF;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 * {
@@ -126,7 +133,8 @@ button:hover {
 .grid-template {
     display: grid;
     grid-template-columns: 70px 1fr;
-    grid-template-rows: 68px 90vh;
+    grid-template-rows: 68px minmax(0, 1fr);
+    height: 100vh;
 }
 
 .top-bar {
@@ -136,6 +144,7 @@ button:hover {
 
 .main-content {
     background-color: var(--color-primary-light);
+    min-height: 0;
 }
 
 h1,

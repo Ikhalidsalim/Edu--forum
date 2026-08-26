@@ -14,28 +14,14 @@
 </head>
 <body>
 
-    <!-- Decorative background blobs -->
-    <div class="bg-decor">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-    </div>
-
     <header>
         <nav id="mainNav">
             <a href="#" class="nav-brand">
                 <div class="brand-icon">
-                    <i class="bi bi-mortarboard-fill"></i>
+                    <img src="/assests/cognicCamp_logo.svg" width="70px">
                 </div>
-                <span>EduForum</span>
+                <span>CogniCamp</span>
             </a>
-
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
 
             <div class="nav-actions">
                 <a href="login.html" class="btn-login">Log in</a>
@@ -45,9 +31,6 @@
                 </a>
             </div>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
-                <i class="bi bi-list" id="menuIcon"></i>
-            </button>
         </nav>
     </header>
 
@@ -71,10 +54,6 @@
                         <a href="register.html" class="btn-primary">
                             Get Started
                             <i class="bi bi-arrow-right"></i>
-                        </a>
-                        <a href="#features" class="btn-secondary">
-                            <i class="bi bi-play-circle"></i>
-                            Learn More
                         </a>
                     </div>
                 </div>
@@ -132,25 +111,6 @@
     </main>
 
     <script>
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-        const menuIcon = document.getElementById('menuIcon');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('nav-open');
-            const isOpen = navLinks.classList.contains('nav-open');
-            menuIcon.className = isOpen ? 'bi bi-x-lg' : 'bi bi-list';
-        });
-
-        // Close mobile menu on link click
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('nav-open');
-                menuIcon.className = 'bi bi-list';
-            });
-        });
-
         // Navbar scroll effect
         const nav = document.getElementById('mainNav');
         window.addEventListener('scroll', () => {

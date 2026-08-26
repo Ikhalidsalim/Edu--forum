@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rooms</title>
+  <link rel="stylesheet" href="/CSS1/room.css">
+  <link rel="stylesheet" href="/CSS1/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
+
 <body>
-  
+
+
+  <div class="container" style="grid-area: container">
+
+
+    <aside class="sidebar" style="grid-area: sidebar">
+
+      <div class="new-room-btn">
+        <button>add room</button>
+      </div>
+
+      <div class="room-list open">
+        <button class="room-label" type="button" aria-expanded="true">DEV 202</button>
+        <nav class="sidebar-nav">
+          <a href="#" data-fragment="room-announcement.html">Announcement</a>
+          <a href="#" data-fragment="room-materials.html">Materials</a>
+        </nav>
+      </div>
+
+      <div class="room-list">
+        <button class="room-label" type="button" aria-expanded="false">EDU 333</button>
+        <nav class="sidebar-nav">
+          <a href="#" data-fragment="room-announcement.html">Announcement</a>
+          <a href="#" data-fragment="room-materials.html">Materials</a>
+        </nav>
+      </div>
+
+    </aside>
+
+    <main class="main" style="grid-area: main">
+      <div id="main-content">
+
+      </div>
+    </main>
+
+
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const roomLists = document.querySelectorAll('.room-list');
+
+      roomLists.forEach((roomList) => {
+        const trigger = roomList.querySelector('.room-label');
+        const nav = roomList.querySelector('.sidebar-nav');
+
+        if (!trigger || !nav) return;
+
+        const setOpen = (isOpen) => {
+          roomList.classList.toggle('open', isOpen);
+          trigger.setAttribute('aria-expanded', String(isOpen));
+        };
+
+        trigger.addEventListener('click', () => {
+          const isAlreadyOpen = roomList.classList.contains('open');
+
+          roomLists.forEach((other) => {
+            const otherTrigger = other.querySelector('.room-label');
+            if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+            other.classList.remove('open');
+          });
+
+          setOpen(!isAlreadyOpen);
+        });
+      });
+    });
+  </script>
+  <script src="/JS1/app.js"></script>
 </body>
+
 </html>

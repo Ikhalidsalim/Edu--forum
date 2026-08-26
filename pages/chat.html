@@ -1,64 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>eLearning Chat</title>
+  <title>Chat</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../CSS1/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="../CSS1/chat.css">
 
 </head>
+
 <body>
   <div class="chat-layout">
     <aside class="sidebar">
-      <div class="course-header">
-        <span class="course-tag">Course</span>
-        <h2>CPE 101</h2>
+      <div class="sidebar-header">
+        <h3>Inbox</h3>
+        <button class="add-btn" type="button"><i class="bi bi-plus"></i>
+</button>
       </div>
 
-      <nav class="sidebar-menu" aria-label="Course navigation">
-        <button class="nav-item active" type="button">Announcement</button>
-        <button class="nav-item" type="button">Materials</button>
-      </nav>
+      <div class="chat-list">
+        <div class="chat-profile active">
+          <div class="avatar">
+            <img src="../assests/pfp pic.jpg" alt="Michael B">
+            <span class="status-dot online"></span>
+          </div>
+          <div class="profile-info">
+            <div class="profile-top">
+              <h4 class="profile-name">Michael B</h4>
+              <span class="profile-time">2m</span>
+            </div>
+            <p class="last-message">Sent you the file</p>
+          </div>
+          <span class="unread-badge">2</span>
+        </div>
+
+        <div class="chat-profile">
+          <div class="avatar">
+            <img src="../assests/pfp pic.jpg" alt="Katie W">
+            <span class="status-dot offline"></span>
+          </div>
+          <div class="profile-info">
+            <div class="profile-top">
+              <h4 class="profile-name">Katie W</h4>
+              <span class="profile-time">10m</span>
+            </div>
+            <p class="last-message">See you tomorrow..</p>
+          </div>
+        </div>
+
+        <div class="chat-profile">
+          <div class="avatar">
+            <img src="../assests/pfp pic.jpg" alt="Arnold J">
+            <span class="status-dot online"></span>
+          </div>
+          <div class="profile-info">
+            <div class="profile-top">
+              <h4 class="profile-name">Arnold J</h4>
+              <span class="profile-time">25m</span>
+            </div>
+            <p class="last-message">I've checked the layout agai...</p>
+          </div>
+        </div>
+      </div>
     </aside>
 
-    <main class="chat">
-      <div class="display-unit">
-        <div class="message">
-          <div class="avatar">I</div>
+    <main class="chat-panel">
+      <header class="chat-header">
+        <div class="chat-header-profile">
+          <img src="../assests/pfp pic.jpg" alt="Michael B" class="chat-header-avatar">
+          <div class="chat-header-info">
+            <h4 class="chat-header-name">Michael B</h4>
+            <span class="chat-header-status">Online</span>
+          </div>
+        </div>
+        <div class="chat-header-actions">
+          <button class="icon-btn" type="button"><i class="bi bi-search"></i>
+</button>
+          <button class="icon-btn" type="button">⋮</button>
+        </div>
+      </header>
+
+      <section class="display-unit">
+        <div class="date-divider">
+          <span>July 29, Tuesday</span>
+        </div>
+
+        <div class="message received">
+          <div class="avatar">
+            <img src="../assests/pfp pic.jpg" alt="Michael B">
+          </div>
           <div class="bubble">
             <h4>Instructor</h4>
-            <p>Reminder: Quiz on Chapter 3 will be available tomorrow. Please review your notes.</p>
-            <div class="timestamp">12:39</div>
+            <p>Reminder: Quiz on Chapter 4 starts tomorrow.</p>
+            <span class="timestamp">10:02 AM</span>
           </div>
         </div>
 
-        <div class="message">
-          <div class="avatar">F</div>
+        <div class="message sent">
           <div class="bubble">
-            <h4>Student (Fatima)</h4>
-            <p>Does anyone have tips for remembering the steps in the scientific method?</p>
-            <div class="timestamp">12:45</div>
+            <p>Okay, thank you very much for the speed!</p>
+            <span class="timestamp">10:07 AM</span>
           </div>
         </div>
 
-        <div class="message">
-          <div class="avatar">A</div>
+        <div class="message received">
+          <div class="avatar">
+            <img src="../assests/pfp pic.jpg" alt="Michael B">
+          </div>
           <div class="bubble">
-            <h4>Student (Ahmed)</h4>
-            <p>I use flashcards — they help me memorize definitions quickly.</p>
-            <div class="timestamp">12:47</div>
+            <h4>Instructor</h4>
+            <p>Reminder: Quiz on Chapter 4 starts tomorrow.</p>
+            <span class="timestamp">10:02 AM</span>
           </div>
         </div>
-      </div>
 
-      <div class="input-unit">
-        <div class="chat-input">
-          <input type="text" placeholder="Type your message...">
-          <button>Send</button>
+        <div class="message sent">
+          <div class="bubble">
+            <p>Okay, thank you very much for the speed!</p>
+            <span class="timestamp">10:07 AM</span>
+          </div>
         </div>
+
+        <div class="message sent">
+          <div class="bubble file-bubble">
+            <span class="file-icon">📄</span>
+            <span class="file-name">Brief.doc</span>
+            <span class="timestamp">10:08 AM</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="chat-input">
+        <button class="icon-btn attach-btn" type="button"><i class="bi bi-paperclip"></i>
+</button>
+        <input type="text" placeholder="Write a message..." class="message-input">
+        <button class="send-btn" type="button"><i class="bi bi-send-fill" style="color: white;"></i>
+</button>
       </div>
     </main>
   </div>
 </body>
+
 </html>
