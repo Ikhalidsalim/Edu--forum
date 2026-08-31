@@ -12,42 +12,67 @@
 
 <body>
 
-
   <div class="container" style="grid-area: container">
 
-
+    <!-- Sidebar changed to Slack-style -->
     <aside class="sidebar" style="grid-area: sidebar">
 
-      <div class="new-room-btn">
-        <button>add room</button>
+      <!-- Workspace Header -->
+      <div class="workspace-header">
+        <h2>New Workspace</h2>
+        <button class="upgrade-btn">Get 50% off Pro</button>
       </div>
 
-      <div class="room-list open">
-        <button class="room-label" type="button" aria-expanded="true">DEV 202</button>
-        <nav class="sidebar-nav">
-          <a href="#" data-fragment="room-announcement.html">Announcement</a>
-          <a href="#" data-fragment="room-materials.html">Materials</a>
-        </nav>
+      <!-- Directories -->
+      <div class="sidebar-section">
+        <h3 class="section-title">Directories</h3>
       </div>
 
+      <!-- Starred -->
+      <div class="sidebar-section">
+        <h3 class="section-title">Starred</h3>
+      </div>
+
+      <!-- Channels -->
+      <div class="sidebar-section">
+        <h3 class="section-title">Channels</h3>
+        <ul class="channel-list">
+          <li><a href="#" class="channel-link">#general</a></li>
+          <li><a href="#" class="channel-link">#random</a></li>
+          <li><button class="add-channel-btn">+ Add channels</button></li>
+        </ul>
+      </div>
+
+      <!-- Direct Messages -->
+      <div class="sidebar-section">
+        <h3 class="section-title">Direct messages</h3>
+        <ul class="dm-list">
+          <li><a href="#" class="dm-link">zainabshehu2005</a></li>
+          <li><button class="invite-btn">+ Invite people</button></li>
+        </ul>
+      </div>
+
+      <!-- Room sections (Announcements, Materials) -->
       <div class="room-list">
-        <button class="room-label" type="button" aria-expanded="false">EDU 333</button>
+        <button class="room-label" aria-expanded="false">Room Sections</button>
         <nav class="sidebar-nav">
-          <a href="#" data-fragment="room-announcement.html">Announcement</a>
-          <a href="#" data-fragment="room-materials.html">Materials</a>
+          <a href="#" data-fragment="/pages/room-announcement.html" class="active">Announcements</a>
+          <a href="#" data-fragment="/pages/room-materials.html">Materials</a>
         </nav>
       </div>
 
     </aside>
 
+    <!-- Main Content stays the same -->
     <main class="main" style="grid-area: main">
       <div id="main-content">
 
       </div>
     </main>
 
-
   </div>
+
+  <!-- Your existing scripts -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const roomLists = document.querySelectorAll('.room-list');
