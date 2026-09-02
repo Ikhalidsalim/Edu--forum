@@ -54,12 +54,7 @@
 
             <div class="top-items">
                 
-                <div class="side-item">
-                    <a href="chat.html" target="display-tab">
-                        <i class="bi bi-chat"></i>
-                        <span>Chats</span>
-                    </a>
-                </div>
+                
 
                 <div class="side-item">
                     <a href="room.html" target="display-tab">
@@ -97,15 +92,23 @@
             </div>
         </div>
         <div class="main-content">
-            <iframe class="display-tab" border="0" name="display-tab">
-
-            </iframe>
+            <iframe class="display-tab" border="0" name="display-tab" src="room.html"></iframe>
         </div>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const sideItems = Array.from(document.querySelectorAll('.side-item'));
+            const roomsLink = document.querySelector('.side-item a[href="room.html"]');
+            const iframe = document.querySelector('.display-tab');
+
+            if (iframe && !iframe.src) {
+                iframe.src = 'room.html';
+            }
+
+            if (roomsLink) {
+                roomsLink.closest('.side-item')?.classList.add('active');
+            }
 
             sideItems.forEach((item) => {
                 const link = item.querySelector('a');

@@ -7,6 +7,7 @@
   <title>Rooms</title>
   <link rel="stylesheet" href="/CSS1/room.css">
   <link rel="stylesheet" href="/CSS1/styles.css">
+  <link rel="stylesheet" href="/CSS1/chat.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 
@@ -16,50 +17,249 @@
 
     <!-- Sidebar changed to Slack-style -->
     <aside class="sidebar" style="grid-area: sidebar">
-
-      <!-- Workspace Header -->
       <div class="workspace-header">
-        <h2>New Workspace</h2>
-        <button class="upgrade-btn">Get 50% off Pro</button>
-      </div>
-
-      <!-- Directories -->
-      <div class="sidebar-section">
-        <h3 class="section-title">Directories</h3>
-      </div>
-
-      <!-- Starred -->
-      <div class="sidebar-section">
-        <h3 class="section-title">Starred</h3>
-      </div>
-
-      <!-- Channels -->
-      <div class="sidebar-section">
-        <h3 class="section-title">Channels</h3>
-        <ul class="channel-list">
-          <li><a href="#" class="channel-link">#general</a></li>
-          <li><a href="#" class="channel-link">#random</a></li>
-          <li><button class="add-channel-btn">+ Add channels</button></li>
-        </ul>
-      </div>
-
-      <!-- Direct Messages -->
-      <div class="sidebar-section">
-        <h3 class="section-title">Direct messages</h3>
-        <ul class="dm-list">
-          <li><a href="#" class="dm-link">zainabshehu2005</a></li>
-          <li><button class="invite-btn">+ Invite people</button></li>
-        </ul>
+        <fieldset class="workspace-name">
+          <select class="workspace-select" aria-label="Select workspace">
+            <option value="workspace1">
+              <h2>Workspace 1</h2>
+            </option>
+            <option value="workspace2">
+              <h2>Workspace 2</h2>
+            </option>
+          </select>
+        </fieldset>
+        <button class="workspace-menu-btn" aria-label="Workspace menu">NEW
+          <i class="bi bi-three-dots-vertical" color="white"></i>
+        </button>
       </div>
 
       <!-- Room sections (Announcements, Materials) -->
-      <div class="room-list">
-        <button class="room-label" aria-expanded="false">Room Sections</button>
+      <div class="channel room-list">
+        <button class="room-label" aria-expanded="false">Channels</button>
         <nav class="sidebar-nav">
           <a href="#" data-fragment="/pages/room-announcement.html" class="active">Announcements</a>
-          <a href="#" data-fragment="/pages/room-materials.html">Materials</a>
+          <a href="#" data-fragment="/pages/room-materials.html">Uploads</a>
         </nav>
       </div>
+      <!-- Direct Messages -->
+
+      <div class="chat-list">
+        <h3 class="section-title room-label">Direct messages</h3>
+
+
+        <div class="sidebar-section ">
+
+
+          <!-- Additional chat profiles -->
+          <div class="chat-profile">
+            
+              <div class="avatar">
+                <img src="../assests/pfp pic.jpg" alt="Katie W">
+                <span class="status-dot offline"></span>
+              </div>
+            <a href="#" data-fragment="/pages/chat.html">
+              <div class="profile-info">
+                <div class="profile-top">
+                  <h4 class="profile-name">Katie W</h4>
+                  <span class="profile-time">10m</span>
+                </div>
+                <p class="last-message">See you tomorrow..</p>
+              </div>
+            </a>
+          </div>
+
+           <div class="chat-profile">
+            
+              <div class="avatar">
+                <img src="../assests/pfp pic.jpg" alt="Katie W">
+                <span class="status-dot offline"></span>
+              </div>
+            <a href="#" data-fragment="/pages/chat.html">
+              <div class="profile-info">
+                <div class="profile-top">
+                  <h4 class="profile-name">Katie W</h4>
+                  <span class="profile-time">10m</span>
+                </div>
+                <p class="last-message">See you tomorrow..</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="chat-profile">
+            
+              <div class="avatar">
+                <img src="../assests/pfp pic.jpg" alt="Katie W">
+                <span class="status-dot offline"></span>
+              </div>
+            <a href="#" data-fragment="/pages/chat.html">
+              <div class="profile-info">
+                <div class="profile-top">
+                  <h4 class="profile-name">Katie W</h4>
+                  <span class="profile-time">10m</span>
+                </div>
+                <p class="last-message">See you tomorrow..</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="chat-profile">
+            
+              <div class="avatar">
+                <img src="../assests/pfp pic.jpg" alt="Katie W">
+                <span class="status-dot offline"></span>
+              </div>
+            <a href="#" data-fragment="/pages/chat.html">
+              <div class="profile-info">
+                <div class="profile-top">
+                  <h4 class="profile-name">Katie W</h4>
+                  <span class="profile-time">10m</span>
+                </div>
+                <p class="last-message">See you tomorrow..</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="chat-profile">
+            
+              <div class="avatar">
+                <img src="../assests/pfp pic.jpg" alt="Katie W">
+                <span class="status-dot offline"></span>
+              </div>
+            <a href="#" data-fragment="/pages/chat.html">
+              <div class="profile-info">
+                <div class="profile-top">
+                  <h4 class="profile-name">Katie W</h4>
+                  <span class="profile-time">10m</span>
+                </div>
+                <p class="last-message">See you tomorrow..</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="chat-profile">
+            
+              <div class="avatar">
+                <img src="../assests/pfp pic.jpg" alt="Arnold J">
+                <span class="status-dot online"></span>
+              </div>
+            <a href="#" data-fragment="/pages/chat.html">
+              <div class="profile-info">
+                <div class="profile-top">
+                  <h4 class="profile-name">Arnold J</h4>
+                  <span class="profile-time">25m</span>
+                </div>
+                <p class="last-message">I've checked the layout agai...</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="chat-profile">
+            
+              <div class="avatar">
+                <img src="../assests/pfp pic.jpg" alt="Arnold J">
+                <span class="status-dot online"></span>
+              </div>
+            <a href="#" data-fragment="/pages/chat.html">
+              <div class="profile-info">
+                <div class="profile-top">
+                  <h4 class="profile-name">Arnold J</h4>
+                  <span class="profile-time">25m</span>
+                </div>
+                <p class="last-message">I've checked the layout agai...</p>
+              </div>
+            </a>
+          </div>
+
+           <div class="chat-profile">
+            
+              <div class="avatar">
+                <img src="../assests/pfp pic.jpg" alt="Katie W">
+                <span class="status-dot offline"></span>
+              </div>
+            <a href="#" data-fragment="/pages/chat.html">
+              <div class="profile-info">
+                <div class="profile-top">
+                  <h4 class="profile-name">Katie W</h4>
+                  <span class="profile-time">10m</span>
+                </div>
+                <p class="last-message">See you tomorrow..</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="chat-profile">
+            
+              <div class="avatar">
+                <img src="../assests/pfp pic.jpg" alt="Arnold J">
+                <span class="status-dot online"></span>
+              </div>
+            <a href="#" data-fragment="/pages/chat.html">
+              <div class="profile-info">
+                <div class="profile-top">
+                  <h4 class="profile-name">Arnold J</h4>
+                  <span class="profile-time">25m</span>
+                </div>
+                <p class="last-message">I've checked the layout agai...</p>
+              </div>
+            </a>
+          </div>
+
+           <div class="chat-profile">
+            
+              <div class="avatar">
+                <img src="../assests/pfp pic.jpg" alt="Katie W">
+                <span class="status-dot offline"></span>
+              </div>
+            <a href="#" data-fragment="/pages/chat.html">
+              <div class="profile-info">
+                <div class="profile-top">
+                  <h4 class="profile-name">Katie W</h4>
+                  <span class="profile-time">10m</span>
+                </div>
+                <p class="last-message">See you tomorrow..</p>
+              </div>
+            </a>
+          </div>
+
+           <div class="chat-profile">
+            
+              <div class="avatar">
+                <img src="../assests/pfp pic.jpg" alt="Katie W">
+                <span class="status-dot offline"></span>
+              </div>
+            <a href="#" data-fragment="/pages/chat.html">
+              <div class="profile-info">
+                <div class="profile-top">
+                  <h4 class="profile-name">Katie W</h4>
+                  <span class="profile-time">10m</span>
+                </div>
+                <p class="last-message">See you tomorrow..</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="chat-profile">
+            
+              <div class="avatar">
+                <img src="../assests/pfp pic.jpg" alt="Arnold J">
+                <span class="status-dot online"></span>
+              </div>
+            <a href="#" data-fragment="/pages/chat.html">
+              <div class="profile-info">
+                <div class="profile-top">
+                  <h4 class="profile-name">Arnold J</h4>
+                  <span class="profile-time">25m</span>
+                </div>
+                <p class="last-message">I've checked the layout agai...</p>
+              </div>
+            </a>
+          </div>
+
+
+        </div>
+      </div>
+
+
 
     </aside>
 

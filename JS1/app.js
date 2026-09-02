@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('.sidebar-nav a[data-fragment]');
+    const links = document.querySelectorAll('a[data-fragment]');
     const main = document.getElementById('main-content');
 
     async function loadFragment(fragment) {
@@ -7,8 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const res = await fetch(fragment, { cache: 'no-store' });
             if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
+
             const html = await res.text();
-            main.innerHTML = html;
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            const body = doc.body || doc.documentElement;
+            const content = body && body.innerHTML ? body.innerHTML : html;
+
+            main.innerHTML = content;
             window.scrollTo(0, 0);
         } catch (err) {
             main.innerHTML = `<div class="error">Failed to load content: ${err.message}</div>`;
@@ -25,8 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Load the first fragment by default (Announcement)
-    const first = document.querySelector('.sidebar-nav a[data-fragment]');
+    const first = document.querySelector('a[data-fragment].active, .sidebar-nav a[data-fragment]');
     if (first) first.click();
 });
 
