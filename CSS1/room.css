@@ -50,22 +50,10 @@ html body{
   border-radius: 8px;
 }
 
-.chat-profile a{
-  text-decoration: none;
-}
-
 .new-room-btn{
   display: flex;
   width: 100%;
   justify-self: flex-end;
-}
-
-.chat-list .section-title{
-  position: sticky;
-  z-index: 10;
-  background-color: #fff;
-  top: -7px;
-  
 }
 
 .new-room-btn button{
@@ -77,15 +65,6 @@ html body{
 .channel {
   height: auto;
   overflow: hidden;
-}
-
-.sidebar-section {
-  margin-top: 10px;
-  box-sizing: border-box;
-  padding: 10px 12px;
-  background: var(--surface);
-  box-shadow: var(--shadow-card);
-  overflow: auto;
 }
 
 .room-list {
@@ -117,20 +96,20 @@ html body{
   transition: color 0.12s ease;
 }
 
-
-
 .sidebar-nav {
-  
-  grid-template-columns: 1fr;
-  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   margin-top: 4px;
   padding-top: 6px;
   border-top: 1px solid var(--border);
 }
 
-
+/* Channels = group messaging list */
 .room-list .sidebar-nav a {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   padding: 8px 10px;
   border-radius: 8px;
   color: var(--paragraph);
@@ -141,18 +120,22 @@ html body{
   transition: background 0.12s ease, color 0.12s ease, transform 0.12s ease;
 }
 
-.channel-list,
-.dm-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+.room-list .sidebar-nav a i.bi-hash{
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 
-.channel-link,
-.dm-link,
+.room-list .sidebar-nav a:hover,
+.room-list .sidebar-nav a.active {
+  background: var(--soft-blue);
+  color: var(--heading);
+  transform: translateX(2px);
+}
+
+.room-list .sidebar-nav a.active i.bi-hash{
+  color: var(--heading);
+}
+
 .add-channel-btn,
 .invite-btn {
   display: block;
@@ -162,23 +145,40 @@ html body{
   border-radius: 8px;
   background: transparent;
   border: none;
-  color: var(--paragraph);
-  font-size: 0.95rem;
+  color: var(--heading);
+  font-weight: 600;
+  font-size: 0.9rem;
   cursor: pointer;
 }
 
-.add-channel-btn,
-.invite-btn {
-  color: var(--heading);
-  font-weight: 600;
+/* PINNED section (replaces the old Direct Messages / chat-profile list) */
+.pinned-section .sidebar-nav a.pinned-item {
+  align-items: flex-start;
+  gap: 10px;
 }
 
+.pinned-section .sidebar-nav a.pinned-item i.bi-pin-angle-fill{
+  margin-top: 3px;
+  font-size: 0.9rem;
+  color: var(--accent, #0a66c2);
+}
 
-.room-list .sidebar-nav a:hover,
-.room-list .sidebar-nav a.active {
-  background: var(--soft-blue);
-  color: var(--heading);
-  transform: translateX(2px);
+.pinned-text{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pinned-title{
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--paragraph);
+}
+
+.pinned-sub{
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--muted);
 }
 
 .main {
@@ -202,7 +202,7 @@ html body{
    font-family: var(--font-body);
 }
 
- .filter-row{
+.filter-row{
   position: sticky;
    top: 5px;
    z-index: 1;
@@ -211,7 +211,7 @@ html body{
    padding-top: 10px;
    width: auto;
    background: var(--page-bg);
- }
+}
 
 .filter-row {
   display: flex;
